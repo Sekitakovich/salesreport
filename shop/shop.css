@@ -1,0 +1,84 @@
+.table-edit {
+	border: 1px none #666666;
+	margin: 1px;
+	padding: 1px;
+}
+.th-edit {
+	border: 1px solid #666666;
+	color: #666666;
+	background-color: #FFCCFF;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.th-editDigit {
+	border: 1px solid #666666;
+	color: #666666;
+	background-color: #FFCCFF;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.td-edit {
+	border: 1px solid #666666;
+	text-align: left;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.formText {
+	color: #333333;
+	text-decoration: none;
+}
+body {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-attachment: fixed;
+	background-repeat: repeat;
+}
+.title1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.mobileMember {
+	font-weight: bold;
+	background-color: #66FFFF;
+}
+.notDisplay {
+	display: none;
+}
+a {
+	text-decoration: none;
+}
+.la20 {
+	background-color: #999999;
+}
+.dummyClass {
+}
+
+.input-Digit {
+	text-align: right;
+}
+.td-editDigit {
+	border: 1px solid #666666;
+	text-align: right;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.microFont {
+	font-size: xx-small;
+}

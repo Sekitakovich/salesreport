@@ -1,0 +1,31 @@
+####SSLRequireSSL
+
+AuthName "HPF staff authentication"
+AuthType basic
+Auth_PG_host localhost
+Auth_PG_port 5432
+Auth_PG_user postgres
+Auth_PG_pwd postgres
+Auth_PG_database hpfmaster
+Auth_PG_pwd_table staff
+Auth_PG_uid_field account
+Auth_PG_pwd_field md5
+Auth_PG_encrypted on
+Auth_PG_hash_type MD5
+Auth_PG_pwd_whereclause " and vf=true "
+
+####Auth_PG_log_table slog
+####Auth_PG_log_uname_field account
+####Auth_PG_log_date_field date
+####Auth_PG_log_uri_field request
+####Auth_PG_log_addrs_field ipaddress
+
+Auth_PG_log_table accesslog
+Auth_PG_log_uname_field account
+####Auth_PG_log_date_field adate
+Auth_PG_log_date_field atime
+
+<LIMIT GET POST>
+        require valid-user
+</LIMIT>
+

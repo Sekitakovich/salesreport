@@ -1,0 +1,125 @@
+.table-edit {
+	border: 1px none #666666;
+	margin: 1px;
+	padding: 1px;
+}
+.th-edit {
+	border: 1px solid #666666;
+	color: #666666;
+	background-color: #FFFFCC;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.th-editDigit {
+	border: 1px solid #666666;
+	color: #666666;
+	background-color: #FFFFCC;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.td-edit {
+	border: 1px solid #666666;
+	text-align: left;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	white-space: nowrap;
+}
+.formText {
+	color: #333333;
+	text-decoration: none;
+}
+body {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-image: none;
+}
+.title1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.mobileMember {
+	font-weight: bold;
+	background-color: #66FFFF;
+}
+.notDisplay {
+	display: none;
+}
+.setDisplay {
+	display: inline;
+}
+a {
+	text-decoration: none;
+}
+.la20 {
+	background-color: #999999;
+}
+.dummyClass {
+}
+
+.blinkImage {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+.input-Digit {
+	text-align: right;
+}
+.td-editDigit {
+	border: 1px solid #666666;
+	text-align: right;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	white-space: nowrap;
+	cursor: help;
+}
+.microFont {
+	font-size: xx-small;
+}
+.notWin {
+	background-color: #EEEEEE;
+}
+.Passion {
+	font-size: x-large;
+	font-weight: bold;
+}
+.eventDay {
+	font-weight: bold;
+}
+.td-editWrap {
+	border: 1px solid #666666;
+	text-align: left;
+	vertical-align: top;
+	margin: 2px;
+	padding: 2px;
+	white-space: normal;
+}
+.openURL {
+	cursor: help;
+}
+.hideTR {
+	display: none;
+}
+.showTR {
+	display: table-row;
+}

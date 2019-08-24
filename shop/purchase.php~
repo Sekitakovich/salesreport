@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>purchase</title>
+<link href="admin.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<script language="JavaScript" type="text/javascript" src="../common.js"></script>
+<script language="JavaScript" type="text/javascript" src="../prototype.js"></script>
+<script language="JavaScript" type="text/javascript" src="../php.js"></script>
+<?php
+include("../hpfmaster.inc");
+if($handle=pg_connect($pgconnect)){
+	$whoami = getStaffInfo($handle);
+
+	pg_query($handle,"begin");
+	switch($_REQUEST['mode']){
+//--------------------------------------------------------------------
+	case "save":
+		$id=$_REQUEST['id'];
+		if($id==0){
+			$query = sprintf("select max(id) from purchase");
+			$qr = pg_query($handle,$query);
+?><!-- <?php printf("Query (%d) [ %s ]\n",$qr,$query); ?> --><?php
+			$qo = pg_fetch_array($qr);
+			$id=$qo['max']+1;
+			$query = sprintf("insert into purchase(id,istaff,ustaff) values('%d','%d','%d')",$id,$whoami['id'],$whoami['id']);
+			$qr = pg_query($handle,$query);
+?><!-- <?php printf("Query (%d) [ %s ]\n",$qr,$query); ?> --><?php
+		}
+		$set = array();
+		$set[] = sprintf("brand='%d'",$_REQUEST['brand']);
+		$set[] = sprintf("number='%s'",pg_escape_string($_REQUEST['number']));
+		$set[] = sprintf("exhibition='%d'",$_REQUEST['exhibition']);
+		$set[] = sprintf("buyer='%d'",$_REQUEST['buyer']);
+		$set[] = sprintf("pdate='%s'",implode("-",$_REQUEST['pdate']));
+		$set[] = sprintf("remark='%s'",pg_escape_string($_REQUEST['remark']));
+		$set[] = sprintf("volume='%d'",$_REQUEST['volume']);
+		$set[] = sprintf("amount='%f'",$_REQUEST['amount']);
+		$set[] = sprintf("udate=now(),ustaff='%d'",$whoami['id']);
+
+		if(isset($_REQUEST['delete'])){
+			$query = sprintf("update purchase set vf=false where id='%d'",$id);
+		}
+		else{
+			$query = sprintf("update purchase set %s where id='%d'",implode(",",$set),$id);
+		}
+		$qr = pg_query($handle,$query);
+?><!-- <?php printf("Query (%d) [ %s ]\n",$qr,$query); ?> --><?php
+// 資料の追加
+	$attachment = $_FILES['attachment'];
+	if($size = $attachment['size']){
+//		$name = $attachment['name'];
+		$name = str_replace(" ","+",$attachment['name']); // 半角スペースは×
+		$type = $attachment['type'];
+		$body = file_get_contents($attachment['tmp_name']);
+		$note = $_REQUEST['note'];
+		$query = sprintf("select max(id) from attachment");
+		$qr = pg_query($handle,$query);
+?><!-- <?php printf("Query (%d) [ %s ]\n",$qr,$query); ?> --><?php
+		$qo = pg_fetch_array($qr);
+		$aid=$qo['max']+1;
+		$filename = sprintf("attachment/%08d",$aid);
+		if(move_uploaded_file($attachment['tmp_name'],$filename)){
+			$query = sprintf("insert into attachment(id,name,type,size,parent,target,note,istaff) values('%d','%s','%s','%d','purchase','%d','%s','%d')",
+				$aid,
+				pg_escape_string($name),
+				$type,$size,
+				$id,
+				pg_escape_string($note),
+				$whoami['id']);
+			$qr = pg_query($handle,$query);
+		}
+	}
+//
+// 資料の削除
+	$av = $_REQUEST['av'];
+	for($a=0,$b=count($av); $b--; $a++){
+		$query = sprintf("update attachment set vf=false where id='%d'",$av[$a]);
+		$qr = pg_query($handle,$query);
+?><!-- <?php printf("Query (%d) [ %s ]\n",$qr,$query); ?> --><?php
+	}
+//
+?>
+<a href="purchase.php">もどる</a>
+<?php
+		break;
+//--------------------------------------------------------------------
+	case "edit":
+		if($id=$_REQUEST['id']){
+			$query = sprintf("select purchase.* from purchase where purchase.id='%d'",$id);
+			$qr = pg_query($handle,$query);
+			$qo = pg_fetch_array($qr);
+			$remark = $qo['remark'];
+			$buyer = $qo['buyer'];
+			$brand = $qo['brand'];
+			$exhibition = $qo['exhibition'];
+			$number = $qo['number'];
+			$volume = $qo['volume'];
+			$amount = $qo['amount'];
+			$pdate = explode("-",$qo['pdate']);
+
+			$refer = 0;
+		}
+		else{
+			$id = 0;
+			$remark = "";
+			$buyer = 0;
+			$brand = 0;
+			$exhibition = 0;
+			$number ='';
+			$volume = 0;
+			$amount = 0;
+			$pdate = explode("-",date("Y-m-d"));
+
+			$refer = 0;
+		}
+?>
+<p class="title1">発注：編集
+		<script language="JavaScript" type="text/javascript">
+function checkTheForm(F)
+{
+	if(F.elements['delete'].checked){
+		return confirm('このレコードを削除しますか?');
+	}
+	else{
+		var mes = new Array();
+		var a;
+		var err = 0;
+		var elm;
+	
+		if(F.elements['brand'].value==0){
+			mes[err++] = "ブランドは必須です";
+		}
+		
+		if(err){
+			alert(mes.join('\n'));
+			return false;
+		}
+		else{
+			var warn = 0;
+			var value;
+			var dst = new Array(
+				{'name':'number','text':'発注番号'},
+				{'name':'volume','text':'数量'},
+				{'name':'amount','text':'総額'}
+			);
+			for(a=0,b=dst.length; b--; a++){
+				value = F.elements[dst[a]['name']].value;
+				if(value==''){
+					mes[warn++] = sprintf("【警告】%s が未入力です",dst[a]['text']);
+				}
+			}
+			if(value=F.elements['attachment'].value,value.match(/\s/)){
+				mes[warn++] = sprintf("【警告】ファイル名(%s)の半角スペースは+に変換されます",value);
+			}
+			if(parseInt(F.elements['as'].value)){
+				elm=F.elements['av[]'];
+				for(a=0,b=elm.length; b--; a++){
+					if(elm[a].checked){
+						mes[warn++] = sprintf("【警告】%s は削除されます",elm[a].getAttribute('file'));
+					}
+				}
+			}
+			if(warn){
+				alert(mes.join('\n'));
+			}
+			
+			return(confirm('この内容で登録してよろしいですか?'))
+		}
+	}
+}
+		</script>
+</p>
+<form action="" method="post" enctype="multipart/form-data" name="edit" target="_self" id="edit" onsubmit="return checkTheForm(this)">
+		<table width="34%">
+				<tr>
+						<td width="2%" class="th-edit">brand</td>
+						<td width="98%" class="td-edit"><script type="text/javascript">
+function setCurrency(F)
+{
+	var brand = F.elements['brand'];
+	var currency = brand.options[brand.selectedIndex].getAttribute('currency');
+	F.elements['currency'].value = currency;
+}
+</script>
+<select name="brand" id="brand" onchange="setCurrency(this.form)">
+								<option value="0">-- 選択してください --</option>
+								<?php
+		$ddd = array();
+		$query = sprintf("select brand.*,nation.code3,currency.code as ccode,currency.name as cname from brand join (maker join (nation join currency on nation.currency=currency.id) on maker.nation=nation.id) on brand.maker=maker.id where brand.vf=true order by brand.name");
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+		for($a=0; $a<$qs; $a++){
+			$qo = pg_fetch_array($qr,$a);
+			$selected = sprintf("%s",$qo['id']==$brand? $__XHTMLselected:"");
+?>
+								<option currency="<?php printf("%s (%s)",$qo['ccode'],$qo['cname']); ?>" <?php printf("%s",$selected); ?> value="<?php printf("%d",$qo['id']); ?>"><?php printf("%s (%s)",$qo['name'],$qo['code3']); ?></option>
+								<?php
+		}
+?>
+						</select></td>
+						<td width="98%" class="th-edit">exhibition</td>
+						<td width="98%" class="td-edit"><label>
+						<select name="exhibition" id="exhibition">
+								<option value="0">---</option>
+								<?php
+		$ddd = array();
+		$query = sprintf("select * from exhibition where vf=true order by ps desc");
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+		for($a=0; $a<$qs; $a++){
+			$qo = pg_fetch_array($qr,$a);
+			$selected = sprintf("%s",$qo['id']==$exhibition? $__XHTMLselected:"");
+?>
+								<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$qo['id']); ?>"><?php printf("%s",$qo['name']); ?></option>
+								<?php
+		}
+?>
+						</select>
+						</label></td>
+				</tr>
+				<tr>
+						<td class="th-edit">発注日</td>
+						<td class="td-edit"><span class="td-nowrap">
+								<select name="pdate[0]" id="pdate[0]" onchange="leapAdjust(this.form,'pdate')">
+										<?php
+	for($a=$tt[0]-100; $a<=$tt[0]; $a++){
+		$selected=sprintf("%s",$a==$pdate[0]? $__XHTMLselected:"");
+?>
+										<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?>
+										<?php
+	}
+?>
+										</option>
+								</select>
+年
+<select name="pdate[1]" id="pdate[1]" onchange="leapAdjust(this.form,'pdate')">
+		<?php
+	for($a=1; $a<=12; $a++){
+		$selected=sprintf("%s",$a==$pdate[1]? $__XHTMLselected:"");
+?>
+		<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?>
+		<?php
+	}
+?>
+		</option>
+</select>
+月
+<select name="pdate[2]" id="pdate[2]">
+		<?php
+	for($a=1; $a<=31; $a++){
+		$selected=sprintf("%s",$a==$pdate[2]? $__XHTMLselected:"");
+?>
+		<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?>
+		<?php
+	}
+?>
+		</option>
+</select>
+日</span></td>
+						<td class="th-edit">No</td>
+						<td class="td-edit"><label>
+								<input name="number" type="text" id="number" value="<?php printf("%s",$number); ?>" size="32" maxlength="64" />
+						</label></td>
+				</tr>
+				<tr>
+						<td class="th-edit">volume</td>
+						<td class="td-edit"><label>
+								<input name="volume" type="text" class="input-Digit" id="volume" value="<?php printf("%d",$volume); ?>" size="6" maxlength="8" />
+						</label></td>
+						<td class="th-edit">amount</td>
+						<td class="td-edit"><input name="amount" type="text" class="input-Digit" id="amount" value="<?php printf("%.2f",$amount); ?>" size="12" maxlength="24" />
+								(<input name="currency" type="text" id="currency" size="32" maxlength="64" readonly="true" />
+)</td>
+				</tr>
+				<tr>
+						<td class="th-edit">buyer</td>
+						<td class="td-edit"><select name="buyer" id="buyer">
+								<option value="0">-- 選択してください --</option>
+								<?php
+		$ddd = array();
+		$query = sprintf("select * from staff where vf=true and ((attribute&%d)=%d)",ATTR_STAFF_BUYER,ATTR_STAFF_BUYER);
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+		for($a=0; $a<$qs; $a++){
+			$qo = pg_fetch_array($qr,$a);
+			$selected = sprintf("%s",$qo['id']==$buyer? $__XHTMLselected:"");
+?>
+								<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$qo['id']); ?>"><?php printf("%s",$qo['nickname']); ?></option>
+								<?php
+		}
+?>
+						</select></td>
+						<td class="th-edit">&nbsp;</td>
+						<td class="td-edit">&nbsp;</td>
+				</tr>
+<?php
+	$query = sprintf("select attachment.*,staff.nickname from attachment join staff on attachment.istaff=staff.id where attachment.vf=true and attachment.parent='purchase' and attachment.target='%d' order by attachment.udate desc",$id);
+	$ar = pg_query($handle,$query);
+	$as = pg_num_rows($ar);
+	if($as){
+?>
+				<tr>
+						<td class="th-edit">添付資料
+						<script type="text/javascript">
+function outFile(name,id)
+{
+	var url = sprintf("output.php/%s?id=%d",encodeURIComponent(name),id);
+	window.location = url;
+}
+								</script></td>
+						<td colspan="3" class="td-edit">
+						<table width="22%">
+								<tr>
+										<td width="7%" class="th-edit">×
+<?php /* 要素がひとつだと[]が配列とみなされない(Fuck!)のでこの見えないやつをダミーに使う 2008-10-30 */ ?>
+<input name="av[]" type="checkbox" class="notDisplay" id="av[]" value="0" file="" /></td>
+										<td width="7%" class="th-edit">DL</td>
+										<td width="7%" class="th-edit">name</td>
+										<td width="6%" class="th-edit">type</td>
+										<td width="6%" class="th-edit">size</td>
+										<td width="81%" class="th-edit">at</td>
+								</tr>
+<?php
+	for($a=0; $a<$as; $a++){
+		$ao = pg_fetch_array($ar,$a);
+?>
+								<tr>
+										<td class="td-edit"><label>
+												<input name="av[]" file="<?php printf("%s",$ao['name']); ?>" type="checkbox" id="av[]" value="<?php printf("%d",$ao['id']); ?>" />
+										</label></td>
+										<td class="td-edit"><img onclick="outFile('<?php printf("%s",$ao['name']); ?>','<?php printf("%d",$ao['id']); ?>')" src="../images/download_manager.png" width="16" height="16" border="0" /></td>
+										<td class="td-edit">
+										<span title="<?php printf("%s",$ao['note']); ?>"><?php printf("%s",$ao['name']); ?></span>										</td>
+										<td class="td-edit"><?php printf("%s",$ao['type']); ?></td>
+										<td class="td-editDigit"><?php printf("%s",number_format($ao['size'])); ?></td>
+										<td class="td-edit"><?php printf("%s by %s",ts2JP($ao['idate']),$ao['nickname']); ?></td>
+								</tr>
+<?php
+	}
+?>
+						</table>
+						</td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+						<td class="th-edit">資料の追加
+						<input name="as" type="hidden" id="as" value="<?php printf("%d",$as); ?>" /></td>
+						<td colspan="3" class="td-edit"><input name="attachment" type="file" id="attachment" size="64" maxlength="128" /> 
+						note 
+								<label>
+								<input name="note" type="text" id="note" size="48" maxlength="256" />
+						</label></td>
+				</tr>
+				<tr>
+						<td class="th-edit">備考</td>
+						<td colspan="3" class="td-edit"><textarea name="remark" cols="64" rows="8" id="remark"><?php printf("%s",$remark); ?></textarea></td>
+				</tr>
+				<tr>
+						<td class="th-edit">登録</td>
+						<td colspan="3" class="td-edit"><input type="submit" name="exec" id="exec" value="実行" />
+								<input name="mode" type="hidden" id="mode" value="save" />
+								<input name="id" type="hidden" id="id" value="<?php printf("%d",$id); ?>" />
+								<span id="void">
+								<input name="delete" type="checkbox" id="delete" value="t" />
+削除する</span></td>
+				</tr>
+		</table>
+</form><script language="JavaScript" type="text/javascript">
+window.onload = function(){
+
+	setCurrency(document.forms['edit']);
+	var refer = <?php printf("%d",$refer); ?>;
+	var id = <?php printf("%d",$id); ?>;
+	if(refer || id==0){
+		var elm = document.getElementById('void');
+		elm.className = 'notDisplay';
+	}
+	var edit = <?php printf("%s",($whoami['perm']&PERM_MASTER_EDIT)? "true":"false"); ?>;
+	if(edit==false){
+		Form.disable('edit'); // see prototype.js
+	}
+	editPrepare('edit','exec'); // in common.js
+}
+</script>
+<?php
+		break;
+//--------------------------------------------------------------------
+	default:
+		$query = sprintf("select min(pdate),max(pdate) from purchase");
+		$qr = pg_query($handle,$query);
+		$qo = pg_fetch_array($qr);
+		$min = explode("-",$qo['min']);
+		$max = explode("-",$qo['max']);
+		$__dMin = $min[0]-5;
+		$__dMax = $max[0]+5;
+	
+		$__oList = array(
+			array('name'=>'最終更新日時','text'=>'purchase.udate desc,purchase.pdate desc,brand.name desc'),
+			array('name'=>'発注日','text'=>'purchase.pdate desc,brand.name'),
+			array('name'=>'ブランド','text'=>'brand.name,purchase.pdate desc'),
+			array('name'=>'exhibition','text'=>'exhibition.ps desc,purchase.pdate desc'),
+		);
+
+		if(isset($_REQUEST['exec'])){
+			$brand = $_REQUEST['brand'];
+			$exhibition = $_REQUEST['exhibition'];
+			$order = $_REQUEST['order'];
+			$ps = $_REQUEST['ps'];
+			$pe = $_REQUEST['pe'];
+			$season = $_REQUEST['season'];
+			
+			$_SESSION['purchase'] = array('brand'=>$brand,'exhibition'=>$exhibition,'order'=>$order,'ps'=>$ps,'pe'=>$pe,'season'=>$season);
+		}
+		else if(isset($_SESSION['purchase'])){
+			$bo = $_SESSION['purchase'];
+			$brand = $bo['brand'];
+			$exhibition = $bo['exhibition'];
+			$order = $bo['order'];
+			$ps = $bo['ps'];
+			$pe = $bo['pe'];
+			$season = $bo['season'];
+		}
+		else{
+			$brand = 0;
+			$exhibition = 0;
+			$order = 0;
+			$ps = $min;
+			$pe = $max;
+			$season = 0;
+		}
+?>
+<p class="title1">発注(experimental - under construction) <a href="purchase.php?mode=edit">新規登録</a></p>
+<form id="form" name="" method="post" action="">
+		<table width="44%">
+				<tr>
+						<td class="th-edit">対象期間</td>
+						<td colspan="3" class="td-edit"><script type="text/javascript">
+function setSeason(F)
+{
+	var a;
+	var src = F.elements['season'];
+	var ps = explode("-",src.options[src.selectedIndex].getAttribute('ps'));
+	var pe = explode("-",src.options[src.selectedIndex].getAttribute('pe'));
+	for(a=0; a<3; a++){
+		var ooo = sprintf("ps[%d]",a);
+		F.elements[ooo].value = sprintf("%d",ps[a]); leapAdjust(F,'ps');
+		var ooo = sprintf("pe[%d]",a);
+		F.elements[ooo].value = sprintf("%d",pe[a]); leapAdjust(F,'pe');
+	}
+	F.submit();
+}
+</script>
+<label>
+								<select name="season" id="season" onchange="setSeason(this.form)">
+										<option value="0" ps="<?php printf("%s",implode("-",$min)); ?>" pe="<?php printf("%s",implode("-",$max)); ?>">-- 全て --</option>
+										<?php
+		$ddd = array();
+		$query = sprintf("select * from season where vf=true order by purchase[1] desc");
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+		for($a=0; $a<$qs; $a++){
+			$qo = pg_fetch_array($qr,$a);
+			$pp = getPGSQLarray($qo['purchase']);
+			$selected = sprintf("%s",$qo['id']==$season? $__XHTMLselected:"");
+?>
+										<option <?php printf("%s",$selected); ?> ps="<?php printf("%s",$pp[0]); ?>" pe="<?php printf("%s",$pp[1]); ?>" value="<?php printf("%s",$qo['id']); ?>"><?php printf("%s",$qo['name']); ?></option>
+										<?php
+		}
+?>
+								</select></label>
+								<label><select name="ps[0]" id="ps[0]" onchange="leapAdjust(this.form,'ps')">
+										<?php
+for($a=$__dMin; $a<=$__dMax; $a++){
+	$selected=sprintf("%s",$a==$ps[0]? $__XHTMLselected:"");
+?>
+										<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?></option>
+										<?php
+}
+?>
+								</select>
+						</label>
+								<label> 年
+								<select name="ps[1]" id="ps[1]" onchange="leapAdjust(this.form,'ps')">
+										<?php
+for($a=1; $a<=12; $a++){
+	$selected=sprintf("%s",$a==$ps[1]? $__XHTMLselected:"");
+?>
+										<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?></option>
+										<?php
+}
+?>
+								</select>
+								</label>
+								<label> 月
+								<select name="ps[2]" id="ps[2]">
+										<?php
+for($a=1; $a<=31; $a++){
+	$selected=sprintf("%s",$a==$ps[2]? $__XHTMLselected:"");
+?>
+										<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?></option>
+										<?php
+}
+?>
+								</select>
+								</label>
+日 ～
+</label>
+<label>
+<select name="pe[0]" id="pe[0]" onchange="leapAdjust(this.form,'pe')">
+		<?php
+for($a=$__dMin; $a<=$__dMax; $a++){
+	$selected=sprintf("%s",$a==$pe[0]? $__XHTMLselected:"");
+?>
+		<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?></option>
+		<?php
+}
+?>
+</select>
+</label>
+<label> 年
+<select name="pe[1]" id="pe[1]" onchange="leapAdjust(this.form,'pe')">
+		<?php
+for($a=1; $a<=12; $a++){
+	$selected=sprintf("%s",$a==$pe[1]? $__XHTMLselected:"");
+?>
+		<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?></option>
+		<?php
+}
+?>
+</select>
+</label>
+<label> 月
+<select name="pe[2]" id="pe[2]">
+		<?php
+for($a=1; $a<=31; $a++){
+	$selected=sprintf("%s",$a==$pe[2]? $__XHTMLselected:"");
+?>
+		<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%d",$a); ?></option>
+		<?php
+}
+?>
+</select>
+</label>
+日 
+<label>
+<input type="submit" name="show" id="show" value="再表示" />
+</label></td>
+				</tr>
+				<tr>
+						<td width="5%" class="th-edit">brand</td>
+						<td width="24%" class="td-edit"><select name="brand" id="brand" onchange="this.form.submit()">
+								<option value="0">-- 全て --</option>
+								<?php
+		$ddd = array();
+		$query = sprintf("select brand.*,nation.code3,currency.code as ccode,currency.name as cname from brand join (maker join (nation join currency on nation.currency=currency.id) on maker.nation=nation.id) on brand.maker=maker.id where brand.vf=true and brand.id in (select distinct brand from purchase where vf=true) order by brand.name");
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+		for($a=0; $a<$qs; $a++){
+			$qo = pg_fetch_array($qr,$a);
+			$selected = sprintf("%s",$qo['id']==$brand? $__XHTMLselected:"");
+?>
+								<option currency="<?php printf("%s (%s)",$qo['ccode'],$qo['cname']); ?>" <?php printf("%s",$selected); ?> value="<?php printf("%d",$qo['id']); ?>"><?php printf("%s (%s)",$qo['name'],$qo['code3']); ?></option>
+								<?php
+		}
+?>
+						</select></td>
+						<td width="7%" class="th-edit">exhibition</td>
+						<td width="64%" class="td-edit"><select name="exhibition" id="exhibition" onchange="this.form.submit()">
+								<option value="0">-- 全て --</option>
+								<?php
+		$ddd = array();
+		$query = sprintf("select * from exhibition where vf=true and id in (select distinct exhibition from purchase where vf=true) order by ps desc");
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+		for($a=0; $a<$qs; $a++){
+			$qo = pg_fetch_array($qr,$a);
+			$selected = sprintf("%s",$qo['id']==$exhibition? $__XHTMLselected:"");
+?>
+								<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$qo['id']); ?>"><?php printf("%s",$qo['name']); ?></option>
+								<?php
+		}
+?>
+						</select></td>
+				</tr>
+				<tr>
+						<td class="th-edit">&nbsp;</td>
+						<td class="td-edit"><label></label>
+										<label></label></td>
+						<td class="th-edit">並べ替え</td>
+						<td class="td-edit"><select name="order" id="order" onchange="this.form.submit()">
+								<?php
+	for($a=0,$b=count($__oList); $b--; $a++){
+		$selected = sprintf("%s",$a==$order? $__XHTMLselected:"");
+?>
+								<option <?php printf("%s",$selected); ?> value="<?php printf("%d",$a); ?>"><?php printf("%s",$__oList[$a]['name']); ?></option>
+								<?php
+	}
+?>
+						</select>
+										<input name="exec" type="hidden" id="exec" value="on" /></td>
+				</tr>
+		</table>
+</form>
+<?php
+		$qq = array();
+//		$qq[] = sprintf("select currency.code,currency.rate*purchase.amount as yen,exhibition.name as exname,purchase.*,brand.name as brand,bstaff.nickname as buyer,staff.nickname");
+		$qq[] = sprintf("select maker.name as mname,nation.code3,currency.code,currency.rate*purchase.amount as yen,exhibition.name as exname,purchase.*,brand.name as brand,bstaff.nickname as buyer,staff.nickname");
+		$qq[] = sprintf("from purchase join exhibition on purchase.exhibition=exhibition.id join (brand join (maker join (nation join currency on nation.currency=currency.id) on maker.nation=nation.id) on brand.maker=maker.id) on purchase.brand=brand.id join staff as bstaff on purchase.buyer=bstaff.id join staff on purchase.ustaff=staff.id");
+		$qq[] = sprintf("where purchase.vf=true");
+		if($brand){
+			$qq[] = sprintf("and purchase.brand='%d'",$brand);
+		}
+		if($exhibition){
+			$qq[] = sprintf("and purchase.exhibition='%d'",$exhibition);
+		}
+		$qq[] = sprintf("and purchase.pdate between '%s' and '%s'",implode("-",$ps),implode("-",$pe));
+		$qq[] = sprintf("order by %s",$__oList[$order]['text']);
+		$query = implode(" ",$qq);
+		$qr = pg_query($handle,$query);
+		$qs = pg_num_rows($qr);
+?><!-- <?php printf("Query(%d) = [%s]",$qr,$query); ?> --><?php
+?>
+<p class="title1">発注履歴 (<?php printf("%s",number_format($qs)); ?>件 - ￥<span id="totalY">??????</span> ※現時点での為替レートによる換算)</p>
+<form action="" method="post" enctype="application/x-www-form-urlencoded" name="list" target="_self" id="list">
+		<table width="4%">
+				<tr>
+						<td width="2%" class="th-edit">&nbsp;</td>
+						<td width="2%" class="th-edit">発注日</td>
+						<td width="2%" class="th-edit">brand</td>
+						<td width="2%" class="th-edit">No</td>
+						<td width="1%" class="th-edit">exhibition</td>
+						<td width="1%" class="th-edit">amount</td>
+						<td width="1%" class="th-edit">￥</td>
+						<td width="1%" class="th-edit">buyer</td>
+						<td width="95%" class="th-edit">最終更新日時</td>
+				</tr>
+<?php
+	$totalY = 0;
+	$data = pg_fetch_all($qr);
+	for($a=0; $a<$qs; $a++){
+//		$qo = pg_fetch_array($qr,$a);
+		$qo = $data[$a];
+		$totalY += $qo['yen'];
+?>
+				<tr elmtype="purchase" active="<?php printf("%s",$active); ?>">
+						<td class="td-edit"><a href="purchase.php?mode=edit&amp;id=<?php printf("%d",$qo['id']); ?>"><img src="../images/page_edit_16x16.png" alt="修正" width="16" height="16" border="0" /></a></td>
+						<td class="td-edit"><?php printf("%s",dt2JP($qo['pdate'])); ?></td>
+						<td class="td-edit"><span title="<?php printf("%s (by %s - %s)",$qo['brand'],$qo['mname'],$qo['code3']); ?>"><?php printf("%s",cutoffStr($qo['brand'])); ?></span></td>
+						<td class="td-edit"><?php printf("%s",$qo['number']); ?></td>
+						<td class="td-edit"><?php printf("%s",$qo['exname']); ?></td>
+						<td class="td-editDigit"><?php printf("%s (%s)",number_format($qo['amount'],2),$qo['code']); ?></td>
+						<td class="td-editDigit"><?php printf("%s",number_format($qo['yen'])); ?></td>
+						<td class="td-edit"><?php printf("%s",$qo['buyer']); ?></td>
+						<td class="td-edit"><?php printf("%s by %s",ts2JP($qo['udate']),$qo['nickname']); ?></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+						<td class="th-edit">&nbsp;</td>
+						<td class="th-edit">&nbsp;</td>
+						<td class="th-edit">&nbsp;</td>
+						<td class="th-edit">&nbsp;</td>
+						<td class="th-edit">&nbsp;</td>
+						<td class="th-editDigit">&nbsp;</td>
+						<td class="th-editDigit"><?php printf("%s",number_format($totalY)); ?></td>
+						<td class="th-edit">&nbsp;</td>
+						<td class="th-edit">&nbsp;</td>
+				</tr>
+		</table>
+</form>
+<script language="JavaScript" type="text/javascript">
+window.onload = function()
+{
+	var elm = document.getElementsByTagName('TR');
+	var a;
+	var b;
+	for(a=0,b=elm.length; b--; a++){
+//console.info(elm[a].getAttribute("elmtype"));
+		if(elm[a].getAttribute("elmtype")=='purchase'){
+			if(elm[a].getAttribute("active")=='t'){
+//				elm[a].style.backgroundColor = "#FF8080";
+				elm[a].style.background = '#FFCCFF';
+			}
+		}
+	}
+	var elm = document.getElementById('totalY');
+	elm.innerHTML = sprintf("%s",number_format(<?php printf("%d",$totalY); ?>,0));
+}
+</script>
+<?php
+		break;
+//--------------------------------------------------------------------
+	}
+	pg_query($handle,"commit");
+	pg_close($handle);
+}
+?>
+</body>
+</html>
