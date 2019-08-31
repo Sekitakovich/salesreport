@@ -1,0 +1,21 @@
+FTP情報が来ましたので送ります。
+
+
+＜テスト＞
+
+ap01.dtpnet.co.jp
+
+id  :sr168
+pass:sr#168
+
+初期フォルダ: /sr168
+
+
+＜本番＞
+
+bsm05.dtpnet.co.jp
+
+id  :sr168
+pass:sr#168
+
+初期フォルダ: /sr168
