@@ -62,9 +62,9 @@ class Processor(object):
 
         # self.logger.debug(msg=self.matchTable)
 
-    def saveBudget(self, *, item: list):
+    def saveBudget(self, *, item: list) -> bool:
 
-        # self.logger.debug(msg=item)
+        completed: bool = False
 
         try:
             yyyymmdd: str = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8])).strftime(self.dateformat)
@@ -85,9 +85,11 @@ class Processor(object):
             else:  # 店舗未登録
                 self.logger.error(msg='shop [%s] not found' % (shop,))
 
-    def saveSales(self, *, item: list):
+        return completed
 
-        # self.logger.debug(msg=item)
+    def saveSales(self, *, item: list) -> bool:
+
+        completed: bool = False
 
         try:
             yyyymmdd: str = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8])).strftime(self.dateformat)
@@ -136,6 +138,8 @@ class Processor(object):
                 self.logger.error(msg='shop [%s] not found' % (shop,))
                 pass
 
+        return completed
+
     def importCV(self, *, src: str, type: str = 'S'):
 
         self.logger.debug(msg='Processing %s' % (src,))
@@ -149,13 +153,17 @@ class Processor(object):
         except (IOError,) as e:
             self.logger.error(msg=e)
         else:
+            erros: int = 0
             for index, text in enumerate(line, 1):
                 csv: List[str] = text.rstrip('\n').split(',')
                 # self.logger.debug(msg='Line[%04d] %s' % (index, csv))
                 if type == 'S':
-                    self.saveSales(item=csv)
+                    if self.saveSales(item=csv) is False:
+                        erros += 1
                 else:
-                    self.saveBudget(item=csv)
+                    if self.saveBudget(item=csv) is False:
+                        erros += 1
 
-            shutil.move(src=workpath, dst=savepath)
+            if erros == 0:
+                shutil.move(src=workpath, dst=savepath)
             pass
