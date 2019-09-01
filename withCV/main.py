@@ -1,5 +1,8 @@
 import logging
 
+from withCV.retrieve import Retriever
+from withCV.processor import Processor
+
 
 if __name__ == '__main__':
 
