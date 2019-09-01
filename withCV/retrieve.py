@@ -7,17 +7,17 @@ import logging
 
 class Retriever(object):
 
-    def __init__(self, *, server: str, username: str, password: str, folder: str, savepath: str):
+    def __init__(self, *, server: str, username: str, password: str, folder: str, workpath: str):
 
         self.server: str = server
         self.username: str = username
         self.password: str = password
         self.folder: str = folder
 
-        self.savepath: str = savepath
+        self.workpath: str = workpath
         self.logger = logging.getLogger('Log')
 
-    def saveSales(self) -> list:
+    def readCSV(self) -> list:
 
         """
         未処理の*_SALES.csvをファイル毎に取得し保存する
@@ -30,7 +30,7 @@ class Retriever(object):
                 ftp.cwd(self.folder)  # cd to target folder
                 src: List[str] = ftp.nlst('*_SALES.csv')  # do ls *.csv
                 for filename in src:
-                    log: str = ('%s/%s' % (self.savepath, filename))
+                    log: str = ('%s/%s' % (self.workpath, filename))
                     with open(log, 'wb') as f:  # notice, encoding is Shift-Jis
                         ftp.retrbinary('RETR %s' % (filename,), f.write)
                         commer.append(filename)
@@ -41,3 +41,4 @@ class Retriever(object):
             pass
 
         return commer
+

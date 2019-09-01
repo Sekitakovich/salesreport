@@ -1,16 +1,31 @@
 import psycopg2
 from psycopg2.extras import DictCursor
-from dataclasses import dataclass
 from typing import List
+import logging
 
 
 class PGLib(object):
 
     def __init__(self):
+
+        self.logger = logging.getLogger('Log')
         self.param: str = 'host=localhost port=5432 dbname=next user=postgres password=postgres'
-        pass
+
+    def select(self, *, query: str) -> list:
+        try:
+            with psycopg2.connect(self.param) as handle:
+                with handle.cursor(cursor_factory=DictCursor) as cursor:
+                    cursor.execute('begin')
+                    cursor.execute(query)
+                    result: list = cursor.fetchall()
+                    cursor.execute('commit')
+        except psycopg2.Error as e:
+            self.logger.error(msg=e)
+        else:
+            return result
 
     def update(self, *, table: str, id: int, kv: dict) -> bool:
+
         item: List[str] = []
 
         try:
@@ -30,11 +45,11 @@ class PGLib(object):
                         item.append("%s='%s'" % (k, v))
 
                     query: str = 'update %s set %s where id=%d' % (table, ','.join(item), id)
-                    print(query)
+                    self.logger.debug(msg=query)
                     cursor.execute(query)
                     cursor.execute('commit')
         except psycopg2.Error as e:
-            print(e)
+            self.logger.error(msg=e)
             return False
         else:
             return True
@@ -42,7 +57,17 @@ class PGLib(object):
 
 if __name__ == '__main__':
 
-    kv = {'shop': 1, 'note': "よくわかんない"}
-    pglib = PGLib()
-    pglib.update(table='daily', kv=kv, id=0)
+    logger = logging.getLogger('Log')
+    logger.setLevel(logging.DEBUG)
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.DEBUG)
+    logger.addHandler(handler)
 
+    kv = {'shop': 1, 'note': "よくわかんない"}
+
+    pglib = PGLib()
+    # pglib.update(table='daily', kv=kv, id=0)
+
+    ooo = pglib.select(query="select dtp,id,name from shop where vf=true and dtp<>'' order by dtp asc")
+    for shop in ooo:
+        print('dtp=[%s] id=%d (%s)' % (shop['dtp'], shop['id'], shop['name']))

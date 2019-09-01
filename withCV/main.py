@@ -17,11 +17,12 @@ if __name__ == '__main__':
     password: str = 'sr#168'
     folder: str = 'sr168'
 
+    workpath: str = 'work'
     savepath: str = 'logs'
 
-    ftpDTP = Retriever(server=server, username=username, password=password, folder=folder, savepath=savepath)
-    processor = Processor(savepath=savepath)
+    ftpDTP = Retriever(server=server, username=username, password=password, folder=folder, workpath=workpath)
+    processor = Processor(workpath=workpath, savepath=savepath)
 
-    csv = ftpDTP.saveSales()
+    csv = ftpDTP.readCSV()
     for src in csv:
-        processor.readSales(src=src)
+        processor.importSales(src=src)
