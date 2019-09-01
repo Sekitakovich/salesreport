@@ -8,9 +8,19 @@ if __name__ == '__main__':
 
     logger = logging.getLogger('Log')
     logger.setLevel(logging.DEBUG)
-    handler = logging.StreamHandler()
-    handler.setLevel(logging.DEBUG)
-    logger.addHandler(handler)
+
+    # formatter = '%(asctime)s [%(levelname)s]: %(message)s'
+    # filehandler = TimedRotatingFileHandler(Common.logFile, when='D', interval=1, backupCount=7, utc=True)
+    # filehandler.setFormatter(logging.Formatter(formatter, datefmt=Common.Daily.tsFormat))
+    # filehandler.suffix = '%Y-%m-%d'
+    # filehandler.setLevel(logging.INFO)
+    # logger.addHandler(filehandler)
+
+    formatter = '%(asctime)s %(module)s:%(funcName)s [%(levelname)s]: %(message)s'
+    streamhandler = logging.StreamHandler()
+    streamhandler.setFormatter(logging.Formatter(formatter, datefmt='%H:%M:%S'))
+    streamhandler.setLevel(logging.DEBUG)
+    logger.addHandler(streamhandler)
 
     server: str = 'ap01.dtpnet.co.jp'  # notice, testserver
     username: str = 'sr168'
@@ -23,6 +33,12 @@ if __name__ == '__main__':
     ftpDTP = Retriever(server=server, username=username, password=password, folder=folder, workpath=workpath)
     processor = Processor(workpath=workpath, savepath=savepath)
 
-    csv = ftpDTP.readCSV()
-    for src in csv:
-        processor.importSales(src=src)
+    processor.prepareMatching()
+
+    b = ftpDTP.readCSV(type='B')
+    for src in b:
+        processor.importCV(src=src, type='B')
+
+    s = ftpDTP.readCSV(type='S')
+    for src in s:
+        processor.importCV(src=src, type='S')

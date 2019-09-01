@@ -45,7 +45,7 @@ class PGLib(object):
                         item.append("%s='%s'" % (k, v))
 
                     query: str = 'update %s set %s where id=%d' % (table, ','.join(item), id)
-                    self.logger.debug(msg=query)
+                    # self.logger.debug(msg=query)
                     cursor.execute(query)
                     cursor.execute('commit')
         except psycopg2.Error as e:

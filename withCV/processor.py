@@ -32,19 +32,23 @@ class Processor(object):
         self.logger = logging.getLogger('Log')
 
         self.pglib = PGLib()
+        self.dateformat = '%Y-%m-%d'
+        self.timeformat = '%Y-%m-%d %H:%M:%S'
 
         self.matchTable: Dict[str, int] = {}
 
-    def findDaily(self, *, shopID: int, yyyymmdd: dt) -> int:
+    def findDaily(self, *, shopID: int, yyyymmdd: str) -> int:
 
         dailyID: int = 0
 
-        query: str = "select id from daily where id=%d and yyyymmdd='%s'" % (shopID, yyyymmdd.strftime('%Y-%m-%d'))
+        query: str = "select id from daily where vf=true and shop=%d and yyyymmdd='%s'" % (shopID, yyyymmdd)
+        # self.logger.debug(msg=query)
         result = self.pglib.select(query=query)
         try:
-            dailyID = int(result[0])
+            dailyID = int(result[0]['id'])
         except (IndexError, ValueError) as e:
-            self.logger.error(msg=e)
+            # self.logger.error(msg=e)
+            pass
 
         return dailyID
 
@@ -58,17 +62,40 @@ class Processor(object):
 
         # self.logger.debug(msg=self.matchTable)
 
-    def saveSales(self, *, item: list):
+    def saveBudget(self, *, item: list):
 
-        self.logger.debug(msg=item)
+        # self.logger.debug(msg=item)
 
         try:
-            yyyymmdd: dt = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8]))
+            yyyymmdd: str = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8])).strftime(self.dateformat)
+            shop: str = item[1]
+            target = int(item[2])
+        except (IndexError, ValueError, UnicodeDecodeError) as e:
+            self.logger.error(msg=e)
+            pass
+        else:
+            if shop in self.matchTable.keys():
+                shopID: int = self.matchTable[shop]
+                dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd)
+                kv = {'target': target}
+                if dailyID == 0:
+                    kv['shop'] = shopID
+                    kv['yyyymmdd'] = yyyymmdd
+                self.pglib.update(table='daily', kv=kv, id=dailyID)
+            else:  # 店舗未登録
+                self.logger.error(msg='shop [%s] not found' % (shop,))
+
+    def saveSales(self, *, item: list):
+
+        # self.logger.debug(msg=item)
+
+        try:
+            yyyymmdd: str = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8])).strftime(self.dateformat)
             shop: str = item[1]
             member: int = int(item[2])
             visitor: int = int(item[3])
-            etime: dt = dt(int(item[4][0:4]), int(item[4][4:6]), int(item[4][6:8]),
-                           hour=int(item[4][8:10]), minute=int(item[4][10:12]), second=int(item[4][12:14]))
+            etime: str = dt(int(item[4][0:4]), int(item[4][4:6]), int(item[4][6:8]),
+                           hour=int(item[4][8:10]), minute=int(item[4][10:12]), second=int(item[4][12:14])).strftime(self.timeformat)
             result: int = int(item[5])
             book: int = int(item[6])
             booktotal: int = int(item[7])
@@ -79,26 +106,39 @@ class Processor(object):
             pass
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
-            pass
         else:
             if shop in self.matchTable.keys():
                 shopID: int = self.matchTable[shop]
                 dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd)
                 if dailyID:
-                    dm = DailyMembers(yyyymmdd=yyyymmdd, member=member, visitor=visitor, etime=etime,
-                                  result=result, book=book, booktotal=booktotal,
-                                  note=note, mlot=mlot, myen=myen, welcome=welcome)
-                    print(dm)
+                    kv = {
+                        'yyyymmdd': yyyymmdd,
+                        'shop': shopID,
+                        'member': member,
+                        'visitor': visitor,
+                        'etime': etime,
+                        'result': result,
+                        'book': book,
+                        # 'booktotal': booktotal,
+                        'mlot': mlot,
+                        'myen': myen,
+                        'welcome': welcome,
+                        'note': note,  # notice
+                        'entered': 1,
+                        'open': 1,
+                    }
+                    self.pglib.update(table='daily', kv=kv, id=dailyID)
+                    # print(kv)
                 else:  # daily未登録
+                    # self.logger.error(msg='shop [%s] not found' % (shop,))
                     pass
             else:  # 未登録店舗
+                self.logger.error(msg='shop [%s] not found' % (shop,))
                 pass
 
-    def importSales(self, *, src: str):
+    def importCV(self, *, src: str, type: str = 'S'):
 
         self.logger.debug(msg='Processing %s' % (src,))
-
-        self.prepareMatching()
 
         workpath: str = '%s/%s' % (self.workpath, src)
         savepath: str = '%s/%s' % (self.savepath, src)
@@ -112,6 +152,10 @@ class Processor(object):
             for index, text in enumerate(line, 1):
                 csv: List[str] = text.rstrip('\n').split(',')
                 # self.logger.debug(msg='Line[%04d] %s' % (index, csv))
-                self.saveSales(item=csv)
+                if type == 'S':
+                    self.saveSales(item=csv)
+                else:
+                    self.saveBudget(item=csv)
+
             shutil.move(src=workpath, dst=savepath)
             pass

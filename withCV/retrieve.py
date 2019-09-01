@@ -17,7 +17,7 @@ class Retriever(object):
         self.workpath: str = workpath
         self.logger = logging.getLogger('Log')
 
-    def readCSV(self) -> list:
+    def readCSV(self, *, type: str = 'S') -> list:
 
         """
         未処理の*_SALES.csvをファイル毎に取得し保存する
@@ -28,7 +28,8 @@ class Retriever(object):
         try:
             with ftplib.FTP(host=self.server, user=self.username, passwd=self.password) as ftp:
                 ftp.cwd(self.folder)  # cd to target folder
-                src: List[str] = ftp.nlst('*_SALES.csv')  # do ls *.csv
+                suffix: str = '_SALES' if type == 'S' else '_BUDGET'
+                src: List[str] = ftp.nlst('*%s.csv' % suffix)  # do ls *.csv
                 for filename in src:
                     log: str = ('%s/%s' % (self.workpath, filename))
                     with open(log, 'wb') as f:  # notice, encoding is Shift-Jis
@@ -36,7 +37,7 @@ class Retriever(object):
                         commer.append(filename)
 
         except (ftplib.error_perm, ftplib.error_proto, ftplib.error_reply, ftplib.error_temp, IOError) as e:
-            print(e)
+            self.logger.error(msg=e)
         else:
             pass
 
