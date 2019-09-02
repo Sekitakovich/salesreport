@@ -37,11 +37,11 @@ class Processor(object):
 
         self.matchTable: Dict[str, int] = {}
 
-    def findDaily(self, *, shopID: int, yyyymmdd: str) -> int:
+    def findDaily(self, *, shopID: int, yyyymmdd: str, dtp: str) -> int:
 
         dailyID: int = 0
 
-        query: str = "select id from daily where vf=true and shop=%d and yyyymmdd='%s'" % (shopID, yyyymmdd)
+        query: str = "select id from daily where vf=true and shop=%d and yyyymmdd='%s' and dtp='%s'" % (shopID, yyyymmdd, dtp)
         # self.logger.debug(msg=query)
         result = self.pglib.select(query=query)
         try:
@@ -64,6 +64,7 @@ class Processor(object):
 
     def saveBudget(self, *, item: list) -> bool:
 
+        udate: str = dt.now().strftime(self.timeformat)
         completed: bool = False
 
         try:
@@ -74,21 +75,27 @@ class Processor(object):
             self.logger.error(msg=e)
             pass
         else:
+
+            shopID = 0
             if shop in self.matchTable.keys():
                 shopID: int = self.matchTable[shop]
-                dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd)
-                kv = {'target': target}
-                if dailyID == 0:
-                    kv['shop'] = shopID
-                    kv['yyyymmdd'] = yyyymmdd
-                self.pglib.update(table='daily', kv=kv, id=dailyID)
             else:  # 店舗未登録
-                self.logger.error(msg='shop [%s] not found' % (shop,))
+                self.logger.warning(msg='shop [%s] was not found' % (shop,))
+
+            dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
+            if dailyID == 0:
+                self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+                kv = {'dtp': shop}
+                dailyID = self.pglib.update(table='daily', kv=kv, id=0)
+
+            kv = {'target': target, 'shop': shopID, 'yyyymmdd': yyyymmdd, 'udate': udate}
+            self.pglib.update(table='daily', kv=kv, id=dailyID)
 
         return completed
 
     def saveSales(self, *, item: list) -> bool:
 
+        udate: str = dt.now().strftime(self.timeformat)
         completed: bool = False
 
         try:
@@ -109,43 +116,42 @@ class Processor(object):
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
         else:
+            shopID = 0
             if shop in self.matchTable.keys():
                 shopID: int = self.matchTable[shop]
-                dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd)
-                if dailyID:
-                    kv = {
-                        'yyyymmdd': yyyymmdd,
-                        'shop': shopID,
-                        'member': member,
-                        'visitor': visitor,
-                        'etime': etime,
-                        'result': result,
-                        'book': book,
-                        # 'booktotal': booktotal,
-                        'mlot': mlot,
-                        'myen': myen,
-                        'welcome': welcome,
-                        'note': note,  # notice
-                        'entered': 1,
-                        'open': 1,
-                    }
-                    self.pglib.update(table='daily', kv=kv, id=dailyID)
-                    # print(kv)
-                else:  # daily未登録
-                    # self.logger.error(msg='shop [%s] not found' % (shop,))
-                    pass
-            else:  # 未登録店舗
-                self.logger.error(msg='shop [%s] not found' % (shop,))
-                pass
+            else:  # 店舗未登録
+                self.logger.warning(msg='shop [%s] was not found' % (shop,))
+
+            dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
+            if dailyID == 0:
+                self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+
+            kv = {
+                'yyyymmdd': yyyymmdd,
+                'shop': shopID,
+                'member': member,
+                'visitor': visitor,
+                'etime': etime,
+                'result': result,
+                'book': book,
+                # 'booktotal': booktotal,
+                'mlot': mlot,
+                'myen': myen,
+                'welcome': welcome,
+                'note': note,  # notice
+                'entered': 1,
+                'open': 1,
+                'dtp': shop,
+                'udate': udate,
+            }
+            self.pglib.update(table='daily', kv=kv, id=dailyID)
 
         return completed
 
-    def importCV(self, *, src: str, type: str = 'S'):
+    def importCV(self, *, filename: str, type: str = 'S'):
 
-        self.logger.debug(msg='Processing %s' % (src,))
-
-        workpath: str = '%s/%s' % (self.workpath, src)
-        savepath: str = '%s/%s' % (self.savepath, src)
+        workpath: str = '%s/%s' % (self.workpath, filename)
+        savepath: str = '%s/%s' % (self.savepath, filename)
 
         try:
             with open(workpath, encoding='shift_jis') as f:
@@ -153,6 +159,8 @@ class Processor(object):
         except (IOError,) as e:
             self.logger.error(msg=e)
         else:
+            self.logger.debug(msg='Processing %s (%d lines)' % (filename, len(line)))
+
             erros: int = 0
             for index, text in enumerate(line, 1):
                 csv: List[str] = text.rstrip('\n').split(',')

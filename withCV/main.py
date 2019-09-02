@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # filehandler.setLevel(logging.INFO)
     # logger.addHandler(filehandler)
 
-    formatter = '%(asctime)s %(module)s:%(funcName)s [%(levelname)s]: %(message)s'
+    formatter = '%(asctime)s %(module)s:%(lineno)s %(funcName)s [%(levelname)s]: %(message)s'
     streamhandler = logging.StreamHandler()
     streamhandler.setFormatter(logging.Formatter(formatter, datefmt='%H:%M:%S'))
     streamhandler.setLevel(logging.DEBUG)
@@ -37,8 +37,8 @@ if __name__ == '__main__':
 
     b = ftpDTP.readCSV(type='B')
     for src in b:
-        processor.importCV(src=src, type='B')
+        processor.importCV(filename=src, type='B')
 
     s = ftpDTP.readCSV(type='S')
     for src in s:
-        processor.importCV(src=src, type='S')
+        processor.importCV(filename=src, type='S')

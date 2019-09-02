@@ -24,7 +24,7 @@ class PGLib(object):
         else:
             return result
 
-    def update(self, *, table: str, id: int, kv: dict) -> bool:
+    def update(self, *, table: str, id: int, kv: dict) -> int:
 
         item: List[str] = []
 
@@ -50,9 +50,9 @@ class PGLib(object):
                     cursor.execute('commit')
         except psycopg2.Error as e:
             self.logger.error(msg=e)
-            return False
+            return 0
         else:
-            return True
+            return id
 
 
 if __name__ == '__main__':
