@@ -38,6 +38,29 @@ class Processor(object):
 
         self.matchTable: Dict[str, int] = {}
 
+    def wanted(self):
+        """
+        未処理のdailyを捜索・修復する
+        """
+        query: str = "select id,dtp from daily where vf=true and shop=0 and dtp<>'' order by id asc"
+        member: List[dict] = self.pglib.select(query=query)
+        for target in member:
+            # print(target)
+            dtp: str = target['dtp']
+            if dtp in self.matchTable.keys():
+                shopID = self.matchTable[dtp]
+                udate: str = dt.now().strftime(self.timeformat)
+                kv = {
+                    'shop': shopID,
+                    'udate': udate,
+                }
+                result: int = self.pglib.update(table='daily', kv=kv, id=target['id'])
+                if result:
+                    self.logger.info(msg='daily[%d] shop was set to %d from %s' % (result, shopID, dtp))
+            else:
+                # print(dtp)
+                pass
+
     def findDaily(self, *, shopID: int, yyyymmdd: str, dtp: str) -> int:
 
         dailyID: int = 0
@@ -155,7 +178,7 @@ class Processor(object):
 
         return completed
 
-    def importCV(self, *, filename: str, type: str = 'S'):
+    def importCV(self, *, filename: str, type: str):
 
         workpath: str = '%s/%s' % (self.workpath, filename)
         savepath: str = '%s/%s' % (self.savepath, filename)

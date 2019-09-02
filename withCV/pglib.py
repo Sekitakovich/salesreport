@@ -32,6 +32,7 @@ class PGLib(object):
             with psycopg2.connect(self.param) as handle:
                 with handle.cursor(cursor_factory=DictCursor) as cursor:
                     cursor.execute('begin')
+                    cursor.execute('lock table %s in exclusive mode' % (table, ))  # notice!
                     if id == 0:
                         query: str = 'select max(id)+1 as next from %s' % (table,)
                         cursor.execute(query)
