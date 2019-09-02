@@ -21,6 +21,14 @@ class Settings(object):
             'S': '_SALES',
         }
 
+    class PostgreSQL(object):
+
+        host: str = 'localhost'
+        dbname: str = 'next'
+        user: str = 'postgres'
+        password: str = 'postgres'
+        port: int = 5432
+
     class Local(object):
 
         workpath: str = 'work'

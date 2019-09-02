@@ -3,13 +3,17 @@ from psycopg2.extras import DictCursor
 from typing import List
 import logging
 
+from settings import Settings
+
 
 class PGLib(object):
 
     def __init__(self):
 
         self.logger = logging.getLogger('Log')
-        self.param: str = 'host=localhost port=5432 dbname=next user=postgres password=postgres'
+        self.param: str = 'host=%s port=%d dbname=%s user=%s password=%s' % \
+                          (Settings.PostgreSQL.host, Settings.PostgreSQL.port, Settings.PostgreSQL.dbname,
+                           Settings.PostgreSQL.user, Settings.PostgreSQL.password)
 
     def select(self, *, query: str) -> list:
         try:
