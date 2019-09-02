@@ -2,9 +2,9 @@ import logging
 import time
 from logging.handlers import TimedRotatingFileHandler
 
-from withCV.retrieve import Retriever
-from withCV.processor import Processor
-from withCV.settings import Settings
+from retrieve import Retriever
+from processor import Processor
+from settings import Settings
 
 
 if __name__ == '__main__':

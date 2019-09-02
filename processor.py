@@ -4,7 +4,7 @@ import logging
 import shutil
 # from dataclasses import dataclass
 
-from withCV.pglib import PGLib
+from pglib import PGLib
 
 
 # @dataclass()
