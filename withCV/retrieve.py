@@ -28,14 +28,15 @@ class Retriever(object):
                 self.logger.debug(msg='+++ Connected to FTP:%s' % (self.server,))
                 ftp.cwd(self.folder)  # cd to target folder
                 suffix: str = '_SALES' if type == 'S' else '_BUDGET'
-                src: List[str] = ftp.nlst('*%s.csv' % suffix)  # do ls *.csv
-                if len(src):
-                    for filename in src:
+                news: List[str] = ftp.nlst('*%s.csv' % suffix)  # do ls *.csv
+                if len(news):
+                    for filename in news:
                         csv: str = ('%s/%s' % (self.workpath, filename))
                         with open(csv, 'wb') as f:  # notice, encoding is Shift-Jis
-                            ftp.retrbinary('RETR %s' % (filename,), f.write)
+                            ftp.retrbinary('RETR %s' % (filename,), f.write)  # ここで保存
                             commer.append(filename)
-                            self.logger.debug(msg='+++ retrieved %s' % (filename,))
+                            ftp.delete(filename=filename)
+                            self.logger.debug(msg='+++ retrieved and deleted %s' % (filename,))
                 else:
                     self.logger.warning(msg='??? no %s files' % (suffix,))
 
