@@ -25,6 +25,7 @@ class Settings(object):
 
         workpath: str = 'work'
         savepath: str = 'fromCV'
+        savedays: int = 7
 
         logpath: str = 'CVlogs'
         logfile: str = '%s/server.log' % (logpath,)
