@@ -2,26 +2,27 @@ from typing import List, Dict
 from datetime import datetime as dt
 import logging
 import shutil
-from dataclasses import dataclass
+# from dataclasses import dataclass
+
 from withCV.pglib import PGLib
 
 
-@dataclass()
-class DailyMembers(object):
-
-    yyyymmdd: dt  # 計上日付
-    # shop: str  # 得意先コード
-    member: int  # 新規顧客獲得数
-    visitor: int  # 来客数
-    etime: dt  # 出力日時
-    result: int  # 売上金額
-    book: int  # 取り置き金額
-    booktotal: int  # 取り置き残高
-    note: str  # メモ
-    mlot: int  # 顧客買い上げ数
-    myen: int  # 顧客買い上げ金額
-    welcome: int  # 接客回数
-
+# @dataclass()
+# class DailyMembers(object):
+#
+#     yyyymmdd: dt  # 計上日付
+#     # shop: str  # 得意先コード
+#     member: int  # 新規顧客獲得数
+#     visitor: int  # 来客数
+#     etime: dt  # 出力日時
+#     result: int  # 売上金額
+#     book: int  # 取り置き金額
+#     booktotal: int  # 取り置き残高
+#     note: str  # メモ
+#     mlot: int  # 顧客買い上げ数
+#     myen: int  # 顧客買い上げ金額
+#     welcome: int  # 接客回数
+#
 
 class Processor(object):
 
@@ -89,7 +90,8 @@ class Processor(object):
                 dailyID = self.pglib.update(table='daily', kv=kv, id=0)
 
             kv = {'target': target, 'shop': shopID, 'yyyymmdd': yyyymmdd, 'udate': udate}
-            self.pglib.update(table='daily', kv=kv, id=dailyID)
+            if self.pglib.update(table='daily', kv=kv, id=dailyID):
+                completed = True
 
         return completed
 
@@ -116,35 +118,40 @@ class Processor(object):
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
         else:
-            shopID = 0
-            if shop in self.matchTable.keys():
-                shopID: int = self.matchTable[shop]
-            else:  # 店舗未登録
-                self.logger.warning(msg='shop [%s] was not found' % (shop,))
+            if shop:
+                shopID = 0
+                if shop in self.matchTable.keys():
+                    shopID: int = self.matchTable[shop]
+                else:  # 店舗未登録
+                    self.logger.warning(msg='shop [%s] was not found' % (shop,))
 
-            dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
-            if dailyID == 0:
-                self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+                dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
+                if dailyID == 0:
+                    self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
 
-            kv = {
-                'yyyymmdd': yyyymmdd,
-                'shop': shopID,
-                'member': member,
-                'visitor': visitor,
-                'etime': etime,
-                'result': result,
-                'book': book,
-                # 'booktotal': booktotal,
-                'mlot': mlot,
-                'myen': myen,
-                'welcome': welcome,
-                'note': note,  # notice
-                'entered': 1,
-                'open': 1,
-                'dtp': shop,
-                'udate': udate,
-            }
-            self.pglib.update(table='daily', kv=kv, id=dailyID)
+                kv = {
+                    'yyyymmdd': yyyymmdd,
+                    'shop': shopID,
+                    'member': member,
+                    'visitor': visitor,
+                    'etime': etime,
+                    'result': result,
+                    'book': book,
+                    # 'booktotal': booktotal,
+                    'mlot': mlot,
+                    'myen': myen,
+                    'welcome': welcome,
+                    'note': note,  # notice
+                    'entered': 1,
+                    'open': 1,
+                    'dtp': shop,
+                    'udate': udate,
+                }
+
+                if self.pglib.update(table='daily', kv=kv, id=dailyID):
+                    completed = True
+            else:
+                self.logger.critical(msg='void this cause no shopcode')
 
         return completed
 
@@ -174,4 +181,5 @@ class Processor(object):
 
             if erros == 0:
                 shutil.move(src=workpath, dst=savepath)
-            pass
+            else:
+                self.logger.warning(msg='%d erros was occured' % (erros,))

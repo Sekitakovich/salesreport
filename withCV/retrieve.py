@@ -1,7 +1,5 @@
 import ftplib
-from typing import List, Dict
-from dataclasses import dataclass
-from datetime import datetime as dt
+from typing import List
 import logging
 
 
@@ -20,7 +18,7 @@ class Retriever(object):
     def readCSV(self, *, type: str = 'S') -> list:
 
         """
-        未処理の*_SALES.csvをファイル毎に取得し保存する
+        未処理の**.csvをファイル毎に取得し保存する
         """
 
         commer: List[str] = []

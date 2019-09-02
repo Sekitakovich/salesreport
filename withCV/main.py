@@ -28,7 +28,7 @@ if __name__ == '__main__':
     folder: str = 'sr168'
 
     workpath: str = 'work'
-    savepath: str = 'logs'
+    savepath: str = 'fromCV'
 
     ftpDTP = Retriever(server=server, username=username, password=password, folder=folder, workpath=workpath)
     processor = Processor(workpath=workpath, savepath=savepath)
