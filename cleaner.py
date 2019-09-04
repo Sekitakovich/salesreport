@@ -19,13 +19,14 @@ class Cleaner(object):
 
         now = dt.now()
         for f in self.path.iterdir():
-            ct: str = os.stat(f).st_ctime
-            at = dt.fromtimestamp(ct)
-            secs = (now-at).total_seconds()
-            print('%s = %d' % (f.name, secs))
-            if secs>=self.limitsec:
-                os.remove(f)
-                self.logger.debug(msg='deleted %s from saved files' % (f.name,))
+            if f.is_file():
+                ct: str = os.stat(f).st_ctime
+                at = dt.fromtimestamp(ct)
+                secs = (now-at).total_seconds()
+                # print('%s = %d' % (f.name, secs))
+                if secs >= self.limitsec:
+                    os.remove(f)
+                    self.logger.debug(msg='deleted %s from saved files' % (f.name,))
 
 
 if __name__ == '__main__':

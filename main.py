@@ -4,6 +4,7 @@ from logging.handlers import TimedRotatingFileHandler
 
 from retrieve import Retriever
 from processor import Processor
+from cleaner import Cleaner
 from settings import Settings
 
 
@@ -35,14 +36,18 @@ if __name__ == '__main__':
 
     ftpDTP = Retriever(server=ftpserver, username=username, password=password, folder=defaultfolder, workpath=workpath)
     processor = Processor(workpath=workpath, savepath=savepath)
+    cleaner = Cleaner()
 
     logger.info(msg='=== CV -> Salesreport autoimport system version %s was started' % (Settings.INFO.version))
 
     counter: int = 0
     while True:
 
+        cleaner.exec()
+
         counter += 1
         logger.info(msg='*** Start session[%d]' % (counter, ))
+        topS = time.time()
         processor.prepareMatching()
 
         processor.wanted()
@@ -53,4 +58,6 @@ if __name__ == '__main__':
             for src in b:
                 processor.importCV(filename=src, type=k)
 
+        endS = time.time()
+        logger.info(msg='--- end session over %.2f sec' % (endS-topS,))
         time.sleep(Settings.Params.intervalSec)  # 要検討

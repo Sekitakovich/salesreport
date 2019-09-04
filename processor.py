@@ -160,7 +160,7 @@ class Processor(object):
                     'etime': etime,
                     'result': result,
                     'book': book,
-                    # 'booktotal': booktotal,
+                    'booktotal': booktotal,
                     'mlot': mlot,
                     'myen': myen,
                     'welcome': welcome,
