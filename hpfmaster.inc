@@ -32,6 +32,7 @@ define ('ATTR_STAFF_CLERK',0x00000001);
 define ('ATTR_STAFF_BUYER',0x00000002);
 define ('ATTR_STAFF_DIREC',0x00000004);
 define ('ATTR_STAFF_PRESS',0x00000008);
+define ('ATTR_STAFF_DTPCV',0x00000010);
 define ('ATTR_STAFF_ADMIN',0x10000000);
 
 $__dAttr = array(
@@ -39,6 +40,7 @@ $__dAttr = array(
 	array('name'=>'Buyer','mask'=>ATTR_STAFF_BUYER,'icon'=>'money.png'),
 	array('name'=>'Director','mask'=>ATTR_STAFF_DIREC,'icon'=>'eye.png'),
 	array('name'=>'Press','mask'=>ATTR_STAFF_PRESS,'icon'=>'pencil.png'),
+	array('name'=>'CV maintener','mask'=>ATTR_STAFF_DTPCV,'icon'=>'preferences-system.png'),
 	array('name'=>'Admin','mask'=>ATTR_STAFF_ADMIN,'icon'=>'preferences-system.png'),
 );
 
