@@ -1,5 +1,6 @@
 import smtplib
 from email.message import EmailMessage
+import logging
 from typing import List
 
 
@@ -12,6 +13,8 @@ class MailSender(object):
 
         self.user: str = 'k-seki'
         self.password = 'Narikunn+2019'
+
+        self.logger = logging.getLogger('Log')
 
     #     self.to: List[str] = []
     #
@@ -40,8 +43,9 @@ class MailSender(object):
                 smtp.ehlo()
                 smtp.login(user=self.user, password=self.password)
                 smtp.send_message(msg)
+
         except smtplib.SMTPException as e:
-            print(e)
+            self.logger.critical(msg=e)
             return False
         else:
             return True
