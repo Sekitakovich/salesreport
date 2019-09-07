@@ -8,21 +8,17 @@ class MailSender(object):
 
     def __init__(self):
 
+        # HPFのそれを取得・設定すること
         self.server: str = 'mail.klabo.co.jp'
         self.port: int = 587  # submission port
-
         self.user: str = 'k-seki'
         self.password = 'Narikunn+2019'
 
         self.logger = logging.getLogger('Log')
 
-    #     self.to: List[str] = []
-    #
-    # def plusMember(self, *, to: str):
-    #
-    #     if to not in self.to:
-    #         self.to.append(to)
-    #
+    def notify(self) -> bool:
+        return True
+
     def buildMail(self, *, subject: str, body: str, to: str) -> EmailMessage:
 
         msg = EmailMessage()

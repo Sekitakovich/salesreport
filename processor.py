@@ -121,6 +121,7 @@ class Processor(object):
     def saveSales(self, *, item: list) -> bool:
 
         udate: str = dt.now().strftime(self.timeformat)
+        errorList: List[str] = []
         completed: bool = False
 
         try:
@@ -147,10 +148,12 @@ class Processor(object):
                     shopID: int = self.matchTable[shop]
                 else:  # 店舗未登録
                     self.logger.warning(msg='shop [%s] was not found' % (shop,))
+                    errorList.append('shop [%s] was not found' % (shop,))
 
                 dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
                 if dailyID == 0:
                     self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+                    errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
 
                 kv = {
                     'yyyymmdd': yyyymmdd,
@@ -175,6 +178,9 @@ class Processor(object):
                     completed = True
             else:
                 self.logger.critical(msg='void this cause no shopcode')
+
+        if len(errorList):
+            print(errorList)
 
         return completed
 

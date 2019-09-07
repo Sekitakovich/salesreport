@@ -1,5 +1,6 @@
 import logging
 import time
+import argparse
 from logging.handlers import TimedRotatingFileHandler
 
 from retrieve import Retriever
@@ -34,6 +35,13 @@ if __name__ == '__main__':
     workpath: str = Settings.Local.workpath
     savepath: str = Settings.Local.savepath
 
+    parser = argparse.ArgumentParser(description='CV auto importer version %s' % (Settings.INFO.version,))
+
+    parser.add_argument('-o', '--oneshot', action='store_true', help='oneshot mode (not loop)')
+    args = parser.parse_args()
+
+    oneshot: bool = args.oneshot
+
     ftpDTP = Retriever(server=ftpserver, username=username, password=password, folder=defaultfolder, workpath=workpath)
     processor = Processor(workpath=workpath, savepath=savepath)
     cleaner = Cleaner()
@@ -41,23 +49,33 @@ if __name__ == '__main__':
     logger.info(msg='=== CV -> Salesreport autoimport system version %s was started' % (Settings.INFO.version))
 
     counter: int = 0
+
     while True:
 
-        cleaner.exec()
+        try:
+            cleaner.exec()
 
-        counter += 1
-        logger.info(msg='*** Start session[%d]' % (counter, ))
-        topS = time.time()
-        processor.prepareMatching()
+            counter += 1
+            logger.info(msg='*** Start session[%d]' % (counter, ))
+            topS = time.time()
+            processor.prepareMatching()
 
-        processor.wanted()
+            processor.wanted()
 
-        for k, v in Settings.FTP.suffix.items():
+            for k, v in Settings.FTP.suffix.items():
 
-            b = ftpDTP.readCSV(suffix=v)
-            for src in b:
-                processor.importCV(filename=src, type=k)
+                b = ftpDTP.readCSV(suffix=v)
+                for src in b:
+                    processor.importCV(filename=src, type=k)
 
-        endS = time.time()
-        logger.info(msg='--- end session over %.2f sec' % (endS-topS,))
-        time.sleep(Settings.Params.intervalSec)  # 要検討
+            endS = time.time()
+            logger.info(msg='--- end session over %.2f sec' % (endS-topS,))
+
+            if oneshot:
+                break
+            else:
+                time.sleep(Settings.Params.intervalSec)  # 要検討
+        except KeyboardInterrupt as e:
+            break
+        else:
+            pass

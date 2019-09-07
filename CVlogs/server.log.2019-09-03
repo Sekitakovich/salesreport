@@ -1,0 +1,140 @@
+2019-09-02 12:38:13 main:39 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 12:38:13 main:45 <module> [INFO]: *** Start session[1]
+2019-09-02 12:38:19 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 12:47:57 main:39 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 12:47:57 main:45 <module> [INFO]: *** Start session[1]
+2019-09-02 12:48:02 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:19:30 main:39 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:19:30 main:45 <module> [INFO]: *** Start session[1]
+2019-09-02 21:19:32 pglib:27 select [ERROR]: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+2019-09-02 21:19:55 main:39 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:19:55 main:45 <module> [INFO]: *** Start session[1]
+2019-09-02 21:19:58 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:28:11 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:28:11 main:49 <module> [INFO]: *** Start session[1]
+2019-09-02 21:28:16 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:28:50 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:28:50 main:49 <module> [INFO]: *** Start session[1]
+2019-09-02 21:28:56 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:31:08 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:31:08 main:49 <module> [INFO]: *** Start session[1]
+2019-09-02 21:31:12 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:36:12 main:49 <module> [INFO]: *** Start session[2]
+2019-09-02 21:36:20 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:38:57 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:38:57 main:49 <module> [INFO]: *** Start session[1]
+2019-09-02 21:39:03 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:44:03 main:49 <module> [INFO]: *** Start session[2]
+2019-09-02 21:44:10 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:44:19 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:44:19 main:49 <module> [INFO]: *** Start session[1]
+2019-09-02 21:44:25 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:44:25 main:62 <module> [INFO]: --- end session over 6.143660
+2019-09-02 21:44:50 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-02 21:44:50 main:49 <module> [INFO]: *** Start session[1]
+2019-09-02 21:44:54 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:44:54 main:62 <module> [INFO]: --- end session over 4.07 sec
+2019-09-02 21:49:54 main:49 <module> [INFO]: *** Start session[2]
+2019-09-02 21:50:01 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:50:01 main:62 <module> [INFO]: --- end session over 7.05 sec
+2019-09-02 21:55:01 main:49 <module> [INFO]: *** Start session[3]
+2019-09-02 21:55:08 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 21:55:08 main:62 <module> [INFO]: --- end session over 6.87 sec
+2019-09-02 22:00:08 main:49 <module> [INFO]: *** Start session[4]
+2019-09-02 22:00:11 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:00:11 main:62 <module> [INFO]: --- end session over 3.47 sec
+2019-09-02 22:05:11 main:49 <module> [INFO]: *** Start session[5]
+2019-09-02 22:05:17 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:05:17 main:62 <module> [INFO]: --- end session over 5.98 sec
+2019-09-02 22:10:17 main:49 <module> [INFO]: *** Start session[6]
+2019-09-02 22:10:21 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:10:21 main:62 <module> [INFO]: --- end session over 3.96 sec
+2019-09-02 22:15:21 main:49 <module> [INFO]: *** Start session[7]
+2019-09-02 22:15:23 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:15:24 main:62 <module> [INFO]: --- end session over 2.48 sec
+2019-09-02 22:20:24 main:49 <module> [INFO]: *** Start session[8]
+2019-09-02 22:20:26 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:20:27 main:62 <module> [INFO]: --- end session over 2.97 sec
+2019-09-02 22:25:27 main:49 <module> [INFO]: *** Start session[9]
+2019-09-02 22:25:29 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:25:30 main:62 <module> [INFO]: --- end session over 2.97 sec
+2019-09-02 22:30:30 main:49 <module> [INFO]: *** Start session[10]
+2019-09-02 22:30:32 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:30:32 main:62 <module> [INFO]: --- end session over 2.47 sec
+2019-09-02 22:35:32 main:49 <module> [INFO]: *** Start session[11]
+2019-09-02 22:35:35 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:35:35 main:62 <module> [INFO]: --- end session over 3.48 sec
+2019-09-02 22:40:35 main:49 <module> [INFO]: *** Start session[12]
+2019-09-02 22:40:38 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:40:38 main:62 <module> [INFO]: --- end session over 2.96 sec
+2019-09-02 22:45:38 main:49 <module> [INFO]: *** Start session[13]
+2019-09-02 22:45:41 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:45:41 main:62 <module> [INFO]: --- end session over 2.97 sec
+2019-09-02 22:50:41 main:49 <module> [INFO]: *** Start session[14]
+2019-09-02 22:50:44 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:50:44 main:62 <module> [INFO]: --- end session over 2.96 sec
+2019-09-02 22:55:44 main:49 <module> [INFO]: *** Start session[15]
+2019-09-02 22:55:48 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 22:55:48 main:62 <module> [INFO]: --- end session over 4.02 sec
+2019-09-02 23:00:48 main:49 <module> [INFO]: *** Start session[16]
+2019-09-02 23:00:52 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:00:52 main:62 <module> [INFO]: --- end session over 3.93 sec
+2019-09-02 23:05:52 main:49 <module> [INFO]: *** Start session[17]
+2019-09-02 23:05:55 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:05:55 main:62 <module> [INFO]: --- end session over 2.96 sec
+2019-09-02 23:10:55 main:49 <module> [INFO]: *** Start session[18]
+2019-09-02 23:10:58 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:10:58 main:62 <module> [INFO]: --- end session over 2.96 sec
+2019-09-02 23:15:58 main:49 <module> [INFO]: *** Start session[19]
+2019-09-02 23:16:02 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:16:02 main:62 <module> [INFO]: --- end session over 3.98 sec
+2019-09-02 23:21:02 main:49 <module> [INFO]: *** Start session[20]
+2019-09-02 23:21:05 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:21:05 main:62 <module> [INFO]: --- end session over 2.98 sec
+2019-09-02 23:26:05 main:49 <module> [INFO]: *** Start session[21]
+2019-09-02 23:26:08 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:26:08 main:62 <module> [INFO]: --- end session over 2.99 sec
+2019-09-02 23:31:08 main:49 <module> [INFO]: *** Start session[22]
+2019-09-02 23:31:11 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:31:11 main:62 <module> [INFO]: --- end session over 2.97 sec
+2019-09-02 23:36:11 main:49 <module> [INFO]: *** Start session[23]
+2019-09-02 23:36:14 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:36:14 main:62 <module> [INFO]: --- end session over 2.98 sec
+2019-09-02 23:41:14 main:49 <module> [INFO]: *** Start session[24]
+2019-09-02 23:41:18 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:41:18 main:62 <module> [INFO]: --- end session over 3.94 sec
+2019-09-02 23:46:18 main:49 <module> [INFO]: *** Start session[25]
+2019-09-02 23:46:21 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:46:21 main:62 <module> [INFO]: --- end session over 2.94 sec
+2019-09-02 23:51:21 main:49 <module> [INFO]: *** Start session[26]
+2019-09-02 23:51:24 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:51:24 main:62 <module> [INFO]: --- end session over 2.96 sec
+2019-09-02 23:56:24 main:49 <module> [INFO]: *** Start session[27]
+2019-09-02 23:56:27 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-02 23:56:27 main:62 <module> [INFO]: --- end session over 2.98 sec
+2019-09-03 00:01:27 main:49 <module> [INFO]: *** Start session[28]
+2019-09-03 00:01:30 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-03 00:01:30 main:62 <module> [INFO]: --- end session over 2.99 sec
+2019-09-03 00:06:30 main:49 <module> [INFO]: *** Start session[29]
+2019-09-03 00:06:33 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-03 00:06:33 main:62 <module> [INFO]: --- end session over 2.93 sec
+2019-09-03 00:11:33 main:49 <module> [INFO]: *** Start session[30]
+2019-09-03 00:11:40 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-03 00:11:40 main:62 <module> [INFO]: --- end session over 6.97 sec
+2019-09-03 00:16:40 main:49 <module> [INFO]: *** Start session[31]
+2019-09-03 00:16:43 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-03 00:16:43 main:62 <module> [INFO]: --- end session over 2.98 sec
+2019-09-03 08:20:38 main:49 <module> [INFO]: *** Start session[32]
+2019-09-03 08:20:40 pglib:27 select [ERROR]: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+

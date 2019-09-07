@@ -45,3 +45,12 @@ class Settings(object):
     class INFO(object):
 
         version: str = '1.01'
+
+    class SMTP(object):
+
+        # 以下HPFのそれを取得・設定すること
+
+        server: str = 'mail.klabo.co.jp'
+        port: int = 587  # submission port
+        user: str = 'k-seki'
+        password = 'Narikunn+2019'
