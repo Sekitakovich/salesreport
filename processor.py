@@ -5,6 +5,7 @@ import shutil
 # from dataclasses import dataclass
 
 from pglib import PGLib
+from notify import NotifyMail
 
 
 # @dataclass()
@@ -33,6 +34,7 @@ class Processor(object):
         self.logger = logging.getLogger('Log')
 
         self.pglib = PGLib()
+        self.nofity = NotifyMail()
         self.dateformat = '%Y-%m-%d'
         self.timeformat = '%Y-%m-%d %H:%M:%S'
 
@@ -180,7 +182,8 @@ class Processor(object):
                 self.logger.critical(msg='void this cause no shopcode')
 
         if len(errorList):
-            print(errorList)
+            # print(errorList)
+            self.nofity.notify(item=errorList)
 
         return completed
 

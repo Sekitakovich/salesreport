@@ -1,0 +1,18 @@
+2019-09-05 17:14:16 main:41 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-05 17:14:16 main:49 <module> [INFO]: *** Start session[1]
+2019-09-05 17:14:21 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-05 17:14:22 main:62 <module> [INFO]: --- end session over 5.46 sec
+2019-09-05 17:22:40 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-05 17:22:40 main:57 <module> [INFO]: *** Start session[1]
+2019-09-05 17:22:44 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-05 17:22:45 main:70 <module> [INFO]: --- end session over 4.96 sec
+2019-09-05 17:27:11 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-05 17:27:11 main:59 <module> [INFO]: *** Start session[1]
+2019-09-05 17:27:22 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-05 17:27:22 main:59 <module> [INFO]: *** Start session[1]
+2019-09-05 17:27:25 processor:149 saveSales [WARNING]: shop [00013103] was not found
+2019-09-05 17:27:25 main:72 <module> [INFO]: --- end session over 3.44 sec
+2019-09-05 17:35:59 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-05 17:35:59 main:59 <module> [INFO]: *** Start session[1]
+2019-09-05 17:36:02 processor:150 saveSales [WARNING]: shop [00013103] was not found
+2019-09-05 17:36:03 main:72 <module> [INFO]: --- end session over 3.10 sec
