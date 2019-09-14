@@ -1,0 +1,96 @@
+2019-09-07 10:23:40 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-07 10:23:40 main:59 <module> [INFO]: *** Start session[1]
+2019-09-07 10:23:43 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:23:43 main:72 <module> [INFO]: --- end session over 2.59 sec
+2019-09-07 10:25:24 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-07 10:25:24 main:59 <module> [INFO]: *** Start session[1]
+2019-09-07 10:25:27 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:25:27 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:25:27 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:25:27 main:72 <module> [INFO]: --- end session over 3.68 sec
+2019-09-07 10:26:36 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-07 10:26:36 main:59 <module> [INFO]: *** Start session[1]
+2019-09-07 10:26:39 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:26:39 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:26:39 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:26:39 main:72 <module> [INFO]: --- end session over 2.87 sec
+2019-09-07 10:31:39 main:59 <module> [INFO]: *** Start session[2]
+2019-09-07 10:31:42 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:31:42 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:31:42 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:31:42 main:72 <module> [INFO]: --- end session over 2.97 sec
+2019-09-07 10:36:42 main:59 <module> [INFO]: *** Start session[3]
+2019-09-07 10:36:46 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:36:46 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:36:46 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:36:46 main:72 <module> [INFO]: --- end session over 3.95 sec
+2019-09-07 10:41:46 main:59 <module> [INFO]: *** Start session[4]
+2019-09-07 10:41:49 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:41:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:41:49 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:41:49 main:72 <module> [INFO]: --- end session over 2.97 sec
+2019-09-07 10:46:49 main:59 <module> [INFO]: *** Start session[5]
+2019-09-07 10:46:53 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:46:53 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:46:54 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:46:54 main:72 <module> [INFO]: --- end session over 4.44 sec
+2019-09-07 10:51:54 main:59 <module> [INFO]: *** Start session[6]
+2019-09-07 10:51:58 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:51:58 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:51:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:51:59 main:72 <module> [INFO]: --- end session over 5.04 sec
+2019-09-07 10:56:59 main:59 <module> [INFO]: *** Start session[7]
+2019-09-07 10:57:02 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 10:57:02 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 10:57:03 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 10:57:03 main:72 <module> [INFO]: --- end session over 3.97 sec
+2019-09-07 11:02:03 main:59 <module> [INFO]: *** Start session[8]
+2019-09-07 11:02:05 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:02:05 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:02:05 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:02:05 main:72 <module> [INFO]: --- end session over 2.95 sec
+2019-09-07 11:07:05 main:59 <module> [INFO]: *** Start session[9]
+2019-09-07 11:07:08 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:07:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:07:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:07:08 main:72 <module> [INFO]: --- end session over 2.97 sec
+2019-09-07 11:12:08 main:59 <module> [INFO]: *** Start session[10]
+2019-09-07 11:12:11 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:12:11 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:12:11 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:12:11 main:72 <module> [INFO]: --- end session over 2.98 sec
+2019-09-07 11:17:11 main:59 <module> [INFO]: *** Start session[11]
+2019-09-07 11:17:14 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:17:15 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:17:15 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:17:15 main:72 <module> [INFO]: --- end session over 3.35 sec
+2019-09-07 11:22:15 main:59 <module> [INFO]: *** Start session[12]
+2019-09-07 11:22:17 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:22:17 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:22:17 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:22:17 main:72 <module> [INFO]: --- end session over 2.56 sec
+2019-09-07 11:27:17 main:59 <module> [INFO]: *** Start session[13]
+2019-09-07 11:27:20 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:27:20 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:27:20 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:27:20 main:72 <module> [INFO]: --- end session over 2.97 sec
+2019-09-07 11:32:20 main:59 <module> [INFO]: *** Start session[14]
+2019-09-07 11:32:23 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:32:23 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:32:23 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:32:23 main:72 <module> [INFO]: --- end session over 3.02 sec
+2019-09-07 11:37:23 main:59 <module> [INFO]: *** Start session[15]
+2019-09-07 11:37:26 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:37:26 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:37:26 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:37:26 main:72 <module> [INFO]: --- end session over 2.93 sec
+2019-09-07 11:42:26 main:59 <module> [INFO]: *** Start session[16]
+2019-09-07 11:42:29 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:42:29 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:42:29 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:42:29 main:72 <module> [INFO]: --- end session over 2.95 sec
+2019-09-07 11:47:29 main:59 <module> [INFO]: *** Start session[17]
+2019-09-07 11:47:32 processor:152 saveSales [WARNING]: shop [00013103] was not found
+2019-09-07 11:47:32 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-07 11:47:32 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-07 11:47:32 main:72 <module> [INFO]: --- end session over 2.91 sec

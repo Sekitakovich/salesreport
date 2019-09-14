@@ -33,7 +33,7 @@ class Retriever(object):
                         with open(csv, 'wb') as f:  # notice, encoding is Shift-Jis
                             ftp.retrbinary('RETR %s' % (filename,), f.write)  # ここで保存
                             commer.append(filename)
-                            # ftp.delete(filename=filename)
+                            ftp.delete(filename=filename)
                             self.logger.debug(msg='+++ retrieved and deleted %s from %s' % (filename, self.server))
                 else:
                     self.logger.debug(msg='??? no %s files' % (suffix,))
