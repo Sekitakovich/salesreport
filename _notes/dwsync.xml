@@ -11,7 +11,7 @@
 <file name="cleaner.py" server="master.hpfrance.com/www/" local="132118690109544772" remote="132118692470000000" Dst="0" />
 <file name="main.py" server="master.hpfrance.com/www/" local="132121456251221903" remote="132129320950000000" Dst="0" />
 <file name="pglib.py" server="master.hpfrance.com/www/" local="132129295395994798" remote="132129320950000000" Dst="0" />
-<file name="processor.py" server="master.hpfrance.com/www/" local="132129301020155939" remote="132129320950000000" Dst="0" />
+<file name="processor.py" server="master.hpfrance.com/www/" local="132129724378358858" remote="132129727910000000" Dst="0" />
 <file name="retrieve.py" server="master.hpfrance.com/www/" local="132129020030320100" remote="132129320960000000" Dst="0" />
 <file name="settings.py" server="master.hpfrance.com/www/" local="132129307550010002" remote="132129320960000000" Dst="0" />
 <file name="notify.py" server="master.hpfrance.com/www/" local="132122928899136620" remote="132129321690000000" Dst="0" />

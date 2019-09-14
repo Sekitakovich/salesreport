@@ -39,8 +39,8 @@ class Processor(object):
         self.timeformat = '%Y-%m-%d %H:%M:%S'
 
         self.cvencoding = 'cp932'
-        self.cvtimeformat = '%Y/%m/%d %H:%M:%S'
-        # self.cvtimeformat = '%Y%m%d%H%M%S'
+        # self.cvtimeformat = '%Y/%m/%d %H:%M:%S'
+        self.cvtimeformat = '%Y%m%d%H%M%S'
         self.ourtimeformat = '%Y-%m-%d %H:%M:%S'
         self.errorList: List[str] = []
 
