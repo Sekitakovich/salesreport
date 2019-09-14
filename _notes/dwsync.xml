@@ -9,9 +9,10 @@
 <file name="common.css" server="master.hpfrance.com/www/" local="131972665970000000" remote="131972665970000000" Dst="0" />
 <file name="index.php" server="master.hpfrance.com/www/" local="131972665970000000" remote="131972665970000000" Dst="0" />
 <file name="cleaner.py" server="master.hpfrance.com/www/" local="132118690109544772" remote="132118692470000000" Dst="0" />
-<file name="main.py" server="master.hpfrance.com/www/" local="132118690109644350" remote="132118692470000000" Dst="0" />
-<file name="pglib.py" server="master.hpfrance.com/www/" local="132118696729477539" remote="132118697100000000" Dst="0" />
-<file name="processor.py" server="master.hpfrance.com/www/" local="132118690109454853" remote="132118692480000000" Dst="0" />
-<file name="retrieve.py" server="master.hpfrance.com/www/" local="132118667785847848" remote="132118692480000000" Dst="0" />
-<file name="settings.py" server="master.hpfrance.com/www/" local="132118695815064101" remote="132118697100000000" Dst="0" />
+<file name="main.py" server="master.hpfrance.com/www/" local="132121456251221903" remote="132129320950000000" Dst="0" />
+<file name="pglib.py" server="master.hpfrance.com/www/" local="132129295395994798" remote="132129320950000000" Dst="0" />
+<file name="processor.py" server="master.hpfrance.com/www/" local="132129301020155939" remote="132129320950000000" Dst="0" />
+<file name="retrieve.py" server="master.hpfrance.com/www/" local="132129020030320100" remote="132129320960000000" Dst="0" />
+<file name="settings.py" server="master.hpfrance.com/www/" local="132129307550010002" remote="132129320960000000" Dst="0" />
+<file name="notify.py" server="master.hpfrance.com/www/" local="132122928899136620" remote="132129321690000000" Dst="0" />
 </dwsync>

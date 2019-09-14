@@ -15,6 +15,13 @@ class PGLib(object):
                           (Settings.PostgreSQL.host, Settings.PostgreSQL.port, Settings.PostgreSQL.dbname,
                            Settings.PostgreSQL.user, Settings.PostgreSQL.password)
 
+        self.escapetable = str.maketrans({
+            '\'': "\\'",
+        })
+
+    def pg_escape_string(self, *, src: str) -> str:
+        return src.translate(self.escapetable)
+
     def select(self, *, query: str) -> list:
         try:
             with psycopg2.connect(self.param) as handle:
@@ -68,11 +75,16 @@ if __name__ == '__main__':
     handler.setLevel(logging.DEBUG)
     logger.addHandler(handler)
 
-    kv = {'shop': 1, 'note': "よくわかんない"}
-
     pglib = PGLib()
-    # pglib.update(table='daily', kv=kv, id=0)
 
-    ooo = pglib.select(query="select dtp,id,name from shop where vf=true and dtp<>'' order by dtp asc")
-    for shop in ooo:
-        print('dtp=[%s] id=%d (%s)' % (shop['dtp'], shop['id'], shop['name']))
+    # kv = {'shop': 1, 'note': "よくわかんない"}
+    #
+    # # pglib.update(table='daily', kv=kv, id=0)
+    #
+    # ooo = pglib.select(query="select dtp,id,name from shop where vf=true and dtp<>'' order by dtp asc")
+    # for shop in ooo:
+    #     print('dtp=[%s] id=%d (%s)' % (shop['dtp'], shop['id'], shop['name']))
+
+    src: str = "abc'def'ghi"
+    print(src.encode())
+    print(pglib.pg_escape_string(src=src).encode())

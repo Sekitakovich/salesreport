@@ -11,7 +11,7 @@ class Settings(object):
 
         username: str = 'sr168'
         password: str = 'sr#168'
-        defaultfolder: str = 'sr168'
+        defaultfolder: str = 'sr168/SEND'
 
         suffixS: str = '_SALES'
         suffixB: str = '_BUDGET'

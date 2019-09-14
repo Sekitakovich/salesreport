@@ -38,6 +38,12 @@ class Processor(object):
         self.dateformat = '%Y-%m-%d'
         self.timeformat = '%Y-%m-%d %H:%M:%S'
 
+        self.cvencoding = 'cp932'
+        self.cvtimeformat = '%Y/%m/%d %H:%M:%S'
+        # self.cvtimeformat = '%Y%m%d%H%M%S'
+        self.ourtimeformat = '%Y-%m-%d %H:%M:%S'
+        self.errorList: List[str] = []
+
         self.matchTable: Dict[str, int] = {}
 
     def wanted(self):
@@ -96,7 +102,8 @@ class Processor(object):
         try:
             yyyymmdd: str = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8])).strftime(self.dateformat)
             shop: str = item[1]
-            target = int(item[2])
+            target: int = int(item[2])
+            last: int = int(item[3])  # add
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
             pass
@@ -114,7 +121,7 @@ class Processor(object):
                 kv = {'dtp': shop}
                 dailyID = self.pglib.update(table='daily', kv=kv, id=0)
 
-            kv = {'target': target, 'shop': shopID, 'yyyymmdd': yyyymmdd, 'udate': udate}
+            kv = {'target': target, 'last': last, 'shop': shopID, 'yyyymmdd': yyyymmdd, 'udate': udate}
             if self.pglib.update(table='daily', kv=kv, id=dailyID):
                 completed = True
 
@@ -123,7 +130,6 @@ class Processor(object):
     def saveSales(self, *, item: list) -> bool:
 
         udate: str = dt.now().strftime(self.timeformat)
-        errorList: List[str] = []
         completed: bool = False
 
         try:
@@ -131,12 +137,14 @@ class Processor(object):
             shop: str = item[1]
             member: int = int(item[2])
             visitor: int = int(item[3])
-            etime: str = dt(int(item[4][0:4]), int(item[4][4:6]), int(item[4][6:8]),
-                           hour=int(item[4][8:10]), minute=int(item[4][10:12]), second=int(item[4][12:14])).strftime(self.timeformat)
+            etime: str = dt.strptime(item[4], self.cvtimeformat).strftime(self.ourtimeformat)
+            # etime: str = dt(int(item[4][0:4]), int(item[4][4:6]), int(item[4][6:8]),
+            #                hour=int(item[4][8:10]), minute=int(item[4][10:12]), second=int(item[4][12:14])).strftime(self.timeformat)
             result: int = int(item[5])
             book: int = int(item[6])
             booktotal: int = int(item[7])
-            note: str = item[8]  # notice!
+            # note: str = item[8]  # notice!
+            note: str = self.pglib.pg_escape_string(src=item[8])
             mlot: int = int(item[9])
             myen: int = int(item[10])
             welcome: int = int(item[11])
@@ -150,12 +158,12 @@ class Processor(object):
                     shopID: int = self.matchTable[shop]
                 else:  # 店舗未登録
                     self.logger.warning(msg='shop [%s] was not found' % (shop,))
-                    errorList.append('shop [%s] was not found' % (shop,))
+                    self.errorList.append('shop [%s] was not found' % (shop,))
 
                 dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
                 if dailyID == 0:
                     self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
-                    errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
+                    self.errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
 
                 kv = {
                     'yyyymmdd': yyyymmdd,
@@ -181,19 +189,17 @@ class Processor(object):
             else:
                 self.logger.critical(msg='void this cause no shopcode')
 
-        if len(errorList):
-            # print(errorList)
-            self.nofity.notify(item=errorList)
-
         return completed
 
     def importCV(self, *, filename: str, type: str):
+
+        self.errorList.clear()
 
         workpath: str = '%s/%s' % (self.workpath, filename)
         savepath: str = '%s/%s' % (self.savepath, filename)
 
         try:
-            with open(workpath, encoding='shift_jis') as f:
+            with open(workpath, encoding=self.cvencoding) as f:
                 line: List[str] = f.readlines()
         except (IOError,) as e:
             self.logger.error(msg=e)
@@ -215,3 +221,7 @@ class Processor(object):
                 shutil.move(src=workpath, dst=savepath)
             else:
                 self.logger.warning(msg='%d erros was occured' % (erros,))
+
+            if len(self.errorList):
+                self.nofity.notify(item=self.errorList)
+
