@@ -40,7 +40,7 @@ class Settings(object):
 
     class Params(object):
 
-        intervalSec: int = (60*5)
+        intervalSec: int = (60*10)
 
     class INFO(object):
 
