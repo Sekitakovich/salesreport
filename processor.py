@@ -204,7 +204,6 @@ class Processor(object):
         except (IOError,) as e:
             self.logger.error(msg=e)
         else:
-            self.logger.debug(msg='Processing %s (%d lines)' % (filename, len(line)))
 
             erros: int = 0
             for index, text in enumerate(line, 1):
@@ -220,7 +219,7 @@ class Processor(object):
             if erros == 0:
                 shutil.move(src=workpath, dst=savepath)
             else:
-                self.logger.warning(msg='%d erros was occured' % (erros,))
+                self.logger.warning(msg='%d erros was occured at %s' % (erros, filename))
 
             if len(self.errorList):
                 self.nofity.notify(item=self.errorList)

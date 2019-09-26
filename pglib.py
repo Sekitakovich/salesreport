@@ -16,7 +16,7 @@ class PGLib(object):
                            Settings.PostgreSQL.user, Settings.PostgreSQL.password)
 
         self.escapetable = str.maketrans({
-            '\'': "\\'",
+            '\'': "\'\'",
         })
 
     def pg_escape_string(self, *, src: str) -> str:

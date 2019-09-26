@@ -34,7 +34,7 @@ class Retriever(object):
                             ftp.retrbinary('RETR %s' % (filename,), f.write)  # ここで保存
                             commer.append(filename)
                             ftp.delete(filename=filename)
-                            self.logger.debug(msg='+++ retrieved and deleted %s from %s' % (filename, self.server))
+                            self.logger.info(msg='+++ retrieved and deleted %s from %s' % (filename, self.server))
                 else:
                     self.logger.debug(msg='??? no %s files' % (suffix,))
 

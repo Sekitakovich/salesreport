@@ -1,0 +1,932 @@
+2019-09-14 11:15:19 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 11:15:19 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 11:15:19 processor:61 wanted [INFO]: daily[372819] shop was set to 122 from 00013103
+2019-09-14 11:15:21 processor:113 saveBudget [WARNING]: daily [00003101:2019-07-01] was not found
+2019-09-14 11:15:22 main:72 <module> [INFO]: --- end session over 2.77 sec
+2019-09-14 11:20:22 main:59 <module> [INFO]: *** Start session[2]
+2019-09-14 11:20:25 main:72 <module> [INFO]: --- end session over 2.96 sec
+2019-09-14 11:25:25 main:59 <module> [INFO]: *** Start session[3]
+2019-09-14 11:25:28 main:72 <module> [INFO]: --- end session over 2.97 sec
+2019-09-14 11:30:28 main:59 <module> [INFO]: *** Start session[4]
+2019-09-14 11:30:31 main:72 <module> [INFO]: --- end session over 2.97 sec
+2019-09-14 19:14:09 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 19:14:09 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 19:14:12 main:72 <module> [INFO]: --- end session over 3.48 sec
+2019-09-14 19:18:47 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 19:18:47 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 19:18:47 main:72 <module> [INFO]: --- end session over 0.50 sec
+2019-09-14 19:22:29 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 19:22:29 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 19:22:29 main:72 <module> [INFO]: --- end session over 0.55 sec
+2019-09-14 19:27:29 main:59 <module> [INFO]: *** Start session[2]
+2019-09-14 19:27:30 main:72 <module> [INFO]: --- end session over 0.49 sec
+2019-09-14 19:31:15 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 19:31:15 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 19:31:16 main:72 <module> [INFO]: --- end session over 0.51 sec
+2019-09-14 19:32:39 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 19:32:39 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:102 saveBudget [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-14 19:32:40 processor:219 importCV [WARNING]: 60 erros was occured
+2019-09-14 19:39:40 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-14 19:39:40 main:59 <module> [INFO]: *** Start session[1]
+2019-09-14 19:39:41 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-01] was not found
+2019-09-14 19:39:41 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-02] was not found
+2019-09-14 19:39:41 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-03] was not found
+2019-09-14 19:39:42 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-04] was not found
+2019-09-14 19:39:42 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-05] was not found
+2019-09-14 19:39:42 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-06] was not found
+2019-09-14 19:39:43 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-07] was not found
+2019-09-14 19:39:43 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-08] was not found
+2019-09-14 19:39:43 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-09] was not found
+2019-09-14 19:39:43 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-10] was not found
+2019-09-14 19:39:44 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-11] was not found
+2019-09-14 19:39:44 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-12] was not found
+2019-09-14 19:39:44 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-13] was not found
+2019-09-14 19:39:45 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-14] was not found
+2019-09-14 19:39:45 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-15] was not found
+2019-09-14 19:39:45 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-16] was not found
+2019-09-14 19:39:45 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-17] was not found
+2019-09-14 19:39:46 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-18] was not found
+2019-09-14 19:39:46 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-19] was not found
+2019-09-14 19:39:46 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-20] was not found
+2019-09-14 19:39:46 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-21] was not found
+2019-09-14 19:39:47 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-22] was not found
+2019-09-14 19:39:47 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-23] was not found
+2019-09-14 19:39:47 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-24] was not found
+2019-09-14 19:39:48 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-25] was not found
+2019-09-14 19:39:48 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-26] was not found
+2019-09-14 19:39:48 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-27] was not found
+2019-09-14 19:39:48 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-28] was not found
+2019-09-14 19:39:49 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-29] was not found
+2019-09-14 19:39:49 processor:114 saveBudget [WARNING]: daily [00003101:2019-09-30] was not found
+2019-09-14 19:39:49 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-01] was not found
+2019-09-14 19:39:50 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-02] was not found
+2019-09-14 19:39:50 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-03] was not found
+2019-09-14 19:39:50 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-04] was not found
+2019-09-14 19:39:50 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-05] was not found
+2019-09-14 19:39:51 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-06] was not found
+2019-09-14 19:39:51 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-07] was not found
+2019-09-14 19:39:51 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-08] was not found
+2019-09-14 19:39:52 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-09] was not found
+2019-09-14 19:39:52 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-10] was not found
+2019-09-14 19:39:52 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-11] was not found
+2019-09-14 19:39:52 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-12] was not found
+2019-09-14 19:39:53 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-13] was not found
+2019-09-14 19:39:53 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-14] was not found
+2019-09-14 19:39:53 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-15] was not found
+2019-09-14 19:39:53 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-16] was not found
+2019-09-14 19:39:54 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-17] was not found
+2019-09-14 19:39:54 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-18] was not found
+2019-09-14 19:39:54 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-19] was not found
+2019-09-14 19:39:55 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-20] was not found
+2019-09-14 19:39:55 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-21] was not found
+2019-09-14 19:39:55 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-22] was not found
+2019-09-14 19:39:55 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-23] was not found
+2019-09-14 19:39:56 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-24] was not found
+2019-09-14 19:39:56 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-25] was not found
+2019-09-14 19:39:56 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-26] was not found
+2019-09-14 19:39:57 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-27] was not found
+2019-09-14 19:39:57 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-28] was not found
+2019-09-14 19:39:57 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-29] was not found
+2019-09-14 19:39:57 processor:114 saveBudget [WARNING]: daily [00003102:2019-09-30] was not found
+2019-09-15 06:12:07 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:12:07 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:12:09 pglib:34 select [ERROR]: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+2019-09-15 06:13:07 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:13:07 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:13:08 main:72 <module> [INFO]: --- end session over 0.49 sec
+2019-09-15 06:14:15 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:14:15 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:149 saveSales [ERROR]: invalid literal for int() with base 10: '/0'
+2019-09-15 06:14:27 processor:221 importCV [WARNING]: 79 erros was occured
+2019-09-15 06:14:27 main:72 <module> [INFO]: --- end session over 11.26 sec
+2019-09-15 06:19:27 main:59 <module> [INFO]: *** Start session[2]
+2019-09-15 06:19:27 main:72 <module> [INFO]: --- end session over 0.47 sec
+2019-09-15 06:20:00 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:20:00 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:30:35 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:30:35 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:30:36 main:72 <module> [INFO]: --- end session over 0.48 sec
+2019-09-15 06:31:15 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:31:15 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:31:44 processor:165 saveSales [WARNING]: daily [00003102:2019-08-23] was not found
+2019-09-15 06:31:44 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:44 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:45 processor:165 saveSales [WARNING]: daily [00003102:2019-08-26] was not found
+2019-09-15 06:31:45 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:45 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:45 processor:165 saveSales [WARNING]: daily [00003103:2019-09-04] was not found
+2019-09-15 06:31:45 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:45 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:46 processor:165 saveSales [WARNING]: daily [00003104:2019-09-04] was not found
+2019-09-15 06:31:46 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:46 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:46 processor:165 saveSales [WARNING]: daily [00003105:2019-09-04] was not found
+2019-09-15 06:31:46 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:46 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:46 processor:165 saveSales [WARNING]: daily [00003106:2019-09-04] was not found
+2019-09-15 06:31:47 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:47 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:47 processor:165 saveSales [WARNING]: daily [00003107:2019-09-04] was not found
+2019-09-15 06:31:47 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:47 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:47 processor:165 saveSales [WARNING]: daily [00003108:2019-09-04] was not found
+2019-09-15 06:31:47 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:48 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:48 processor:165 saveSales [WARNING]: daily [00003109:2019-09-04] was not found
+2019-09-15 06:31:48 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:48 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:48 processor:165 saveSales [WARNING]: daily [00003109:2019-09-10] was not found
+2019-09-15 06:31:48 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:48 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:48 processor:165 saveSales [WARNING]: daily [00003110:2019-09-04] was not found
+2019-09-15 06:31:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:49 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:49 processor:165 saveSales [WARNING]: daily [00004101:2019-09-04] was not found
+2019-09-15 06:31:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:49 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:49 processor:165 saveSales [WARNING]: daily [00004102:2019-09-04] was not found
+2019-09-15 06:31:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:50 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:50 processor:165 saveSales [WARNING]: daily [00004103:2019-08-27] was not found
+2019-09-15 06:31:50 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:50 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:50 processor:165 saveSales [WARNING]: daily [00004103:2019-09-04] was not found
+2019-09-15 06:31:50 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:50 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:50 processor:165 saveSales [WARNING]: daily [00004104:2019-09-04] was not found
+2019-09-15 06:31:51 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:51 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:51 processor:165 saveSales [WARNING]: daily [00004105:2019-09-04] was not found
+2019-09-15 06:31:51 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:51 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:51 processor:165 saveSales [WARNING]: daily [00004106:2019-09-04] was not found
+2019-09-15 06:31:52 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:52 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:52 processor:165 saveSales [WARNING]: daily [00004107:2019-09-04] was not found
+2019-09-15 06:31:52 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:52 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:52 processor:160 saveSales [WARNING]: shop [00004108] was not found
+2019-09-15 06:31:52 processor:165 saveSales [WARNING]: daily [00004108:2019-09-04] was not found
+2019-09-15 06:31:52 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:52 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:53 processor:165 saveSales [WARNING]: daily [00005102:2019-09-04] was not found
+2019-09-15 06:31:53 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:53 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:53 processor:165 saveSales [WARNING]: daily [00006101:2019-09-04] was not found
+2019-09-15 06:31:53 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:53 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:53 processor:165 saveSales [WARNING]: daily [00006102:2019-09-04] was not found
+2019-09-15 06:31:54 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:54 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:54 processor:165 saveSales [WARNING]: daily [00006103:2019-09-04] was not found
+2019-09-15 06:31:54 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:54 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:54 processor:165 saveSales [WARNING]: daily [00006104:2019-09-04] was not found
+2019-09-15 06:31:54 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:55 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:55 processor:165 saveSales [WARNING]: daily [00006106:2019-09-04] was not found
+2019-09-15 06:31:55 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:55 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:55 processor:165 saveSales [WARNING]: daily [00006107:2019-09-04] was not found
+2019-09-15 06:31:55 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:55 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:55 processor:165 saveSales [WARNING]: daily [00006108:2019-09-04] was not found
+2019-09-15 06:31:56 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:56 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:56 processor:160 saveSales [WARNING]: shop [00006109] was not found
+2019-09-15 06:31:56 processor:165 saveSales [WARNING]: daily [00006109:2019-09-04] was not found
+2019-09-15 06:31:56 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:56 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:56 processor:160 saveSales [WARNING]: shop [00006110] was not found
+2019-09-15 06:31:56 processor:165 saveSales [WARNING]: daily [00006110:2019-09-04] was not found
+2019-09-15 06:31:57 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:57 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:57 processor:165 saveSales [WARNING]: daily [00007103:2019-09-01] was not found
+2019-09-15 06:31:57 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:57 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:57 processor:165 saveSales [WARNING]: daily [00007103:2019-09-04] was not found
+2019-09-15 06:31:57 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:57 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:57 processor:165 saveSales [WARNING]: daily [00008101:2019-09-04] was not found
+2019-09-15 06:31:58 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:58 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:58 processor:165 saveSales [WARNING]: daily [00008102:2019-09-04] was not found
+2019-09-15 06:31:58 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:58 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:58 processor:165 saveSales [WARNING]: daily [00008103:2019-09-04] was not found
+2019-09-15 06:31:59 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:59 processor:165 saveSales [WARNING]: daily [00008105:2019-09-04] was not found
+2019-09-15 06:31:59 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:31:59 processor:165 saveSales [WARNING]: daily [00008106:2019-09-04] was not found
+2019-09-15 06:31:59 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:31:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:00 processor:165 saveSales [WARNING]: daily [00008107:2019-09-04] was not found
+2019-09-15 06:32:00 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:00 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:00 processor:165 saveSales [WARNING]: daily [00011101:2019-09-02] was not found
+2019-09-15 06:32:00 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:00 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:01 processor:165 saveSales [WARNING]: daily [00011101:2019-09-04] was not found
+2019-09-15 06:32:01 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:01 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:01 processor:165 saveSales [WARNING]: daily [00011102:2019-09-04] was not found
+2019-09-15 06:32:01 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:01 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:01 processor:165 saveSales [WARNING]: daily [00012101:2019-09-04] was not found
+2019-09-15 06:32:02 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:02 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:02 processor:165 saveSales [WARNING]: daily [00012101:2019-09-09] was not found
+2019-09-15 06:32:02 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:02 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:02 processor:165 saveSales [WARNING]: daily [00012102:2019-09-04] was not found
+2019-09-15 06:32:03 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:03 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:03 processor:165 saveSales [WARNING]: daily [00012103:2019-09-04] was not found
+2019-09-15 06:32:03 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:03 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:03 processor:165 saveSales [WARNING]: daily [00012105:2019-09-04] was not found
+2019-09-15 06:32:03 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:03 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:04 processor:165 saveSales [WARNING]: daily [00012106:2019-09-04] was not found
+2019-09-15 06:32:04 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:04 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:04 processor:165 saveSales [WARNING]: daily [00013101:2019-09-04] was not found
+2019-09-15 06:32:04 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:04 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:04 processor:165 saveSales [WARNING]: daily [00013102:2019-09-04] was not found
+2019-09-15 06:32:05 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:05 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:05 processor:165 saveSales [WARNING]: daily [00013103:2019-09-04] was not found
+2019-09-15 06:32:05 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:05 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:05 processor:165 saveSales [WARNING]: daily [00013104:2019-09-04] was not found
+2019-09-15 06:32:05 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:06 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:06 processor:165 saveSales [WARNING]: daily [00014101:2019-09-04] was not found
+2019-09-15 06:32:06 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:06 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:06 processor:165 saveSales [WARNING]: daily [00014102:2019-09-04] was not found
+2019-09-15 06:32:06 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:06 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:06 processor:165 saveSales [WARNING]: daily [00014103:2019-09-04] was not found
+2019-09-15 06:32:07 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:07 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:07 processor:165 saveSales [WARNING]: daily [00014104:2019-09-04] was not found
+2019-09-15 06:32:07 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:07 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:07 processor:165 saveSales [WARNING]: daily [00014105:2019-09-04] was not found
+2019-09-15 06:32:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:08 processor:160 saveSales [WARNING]: shop [00014106] was not found
+2019-09-15 06:32:08 processor:165 saveSales [WARNING]: daily [00014106:2019-09-04] was not found
+2019-09-15 06:32:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:08 processor:165 saveSales [WARNING]: daily [00015102:2019-09-04] was not found
+2019-09-15 06:32:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:09 processor:165 saveSales [WARNING]: daily [00015103:2019-09-04] was not found
+2019-09-15 06:32:09 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:09 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:09 processor:165 saveSales [WARNING]: daily [00016101:2019-09-04] was not found
+2019-09-15 06:32:09 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:09 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:09 processor:165 saveSales [WARNING]: daily [00021101:2019-09-04] was not found
+2019-09-15 06:32:10 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:10 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:10 processor:165 saveSales [WARNING]: daily [00022101:2019-08-08] was not found
+2019-09-15 06:32:10 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:10 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:10 processor:165 saveSales [WARNING]: daily [00022101:2019-08-10] was not found
+2019-09-15 06:32:10 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:10 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:11 processor:165 saveSales [WARNING]: daily [00022101:2019-08-14] was not found
+2019-09-15 06:32:11 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:11 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:11 processor:165 saveSales [WARNING]: daily [00022101:2019-08-17] was not found
+2019-09-15 06:32:11 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:11 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:11 processor:165 saveSales [WARNING]: daily [00022101:2019-08-18] was not found
+2019-09-15 06:32:12 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:12 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:12 processor:165 saveSales [WARNING]: daily [00022101:2019-08-19] was not found
+2019-09-15 06:32:12 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:12 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:12 processor:165 saveSales [WARNING]: daily [00022101:2019-08-22] was not found
+2019-09-15 06:32:12 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:13 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:13 processor:165 saveSales [WARNING]: daily [00022101:2019-08-24] was not found
+2019-09-15 06:32:13 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:13 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:13 processor:165 saveSales [WARNING]: daily [00022101:2019-08-25] was not found
+2019-09-15 06:32:13 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:13 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:13 processor:165 saveSales [WARNING]: daily [00022101:2019-09-04] was not found
+2019-09-15 06:32:14 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:14 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:14 processor:165 saveSales [WARNING]: daily [00023101:2019-09-04] was not found
+2019-09-15 06:32:14 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:14 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:14 processor:165 saveSales [WARNING]: daily [00023102:2019-09-04] was not found
+2019-09-15 06:32:15 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:15 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:15 processor:165 saveSales [WARNING]: daily [00024101:2019-09-04] was not found
+2019-09-15 06:32:15 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:15 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:15 processor:165 saveSales [WARNING]: daily [00028101:2019-09-04] was not found
+2019-09-15 06:32:15 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:32:15 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:32:15 main:72 <module> [INFO]: --- end session over 60.44 sec
+2019-09-15 06:37:15 main:59 <module> [INFO]: *** Start session[2]
+2019-09-15 06:37:16 main:72 <module> [INFO]: --- end session over 0.47 sec
+2019-09-15 06:42:16 main:59 <module> [INFO]: *** Start session[3]
+2019-09-15 06:42:16 main:72 <module> [INFO]: --- end session over 0.47 sec
+2019-09-15 06:47:16 main:59 <module> [INFO]: *** Start session[4]
+2019-09-15 06:47:18 main:72 <module> [INFO]: --- end session over 2.08 sec
+2019-09-15 06:52:18 main:59 <module> [INFO]: *** Start session[5]
+2019-09-15 06:52:19 main:72 <module> [INFO]: --- end session over 0.47 sec
+2019-09-15 06:54:22 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 06:54:22 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 06:54:22 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-01] was not found
+2019-09-15 06:54:23 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-02] was not found
+2019-09-15 06:54:23 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-03] was not found
+2019-09-15 06:54:23 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-04] was not found
+2019-09-15 06:54:23 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-05] was not found
+2019-09-15 06:54:24 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-06] was not found
+2019-09-15 06:54:24 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-07] was not found
+2019-09-15 06:54:24 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-08] was not found
+2019-09-15 06:54:24 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-09] was not found
+2019-09-15 06:54:25 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-10] was not found
+2019-09-15 06:54:25 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-11] was not found
+2019-09-15 06:54:25 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-12] was not found
+2019-09-15 06:54:25 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-13] was not found
+2019-09-15 06:54:26 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-14] was not found
+2019-09-15 06:54:26 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-15] was not found
+2019-09-15 06:54:26 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-16] was not found
+2019-09-15 06:54:26 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-17] was not found
+2019-09-15 06:54:27 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-18] was not found
+2019-09-15 06:54:27 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-19] was not found
+2019-09-15 06:54:27 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-20] was not found
+2019-09-15 06:54:27 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-21] was not found
+2019-09-15 06:54:28 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-22] was not found
+2019-09-15 06:54:28 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-23] was not found
+2019-09-15 06:54:28 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-24] was not found
+2019-09-15 06:54:28 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-25] was not found
+2019-09-15 06:54:29 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-26] was not found
+2019-09-15 06:54:29 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-27] was not found
+2019-09-15 06:54:29 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-28] was not found
+2019-09-15 06:54:29 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-29] was not found
+2019-09-15 06:54:30 processor:119 saveBudget [WARNING]: daily [00003101:2019-09-30] was not found
+2019-09-15 06:54:30 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-01] was not found
+2019-09-15 06:54:30 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-02] was not found
+2019-09-15 06:54:30 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-03] was not found
+2019-09-15 06:54:31 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-04] was not found
+2019-09-15 06:54:31 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-05] was not found
+2019-09-15 06:54:31 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-06] was not found
+2019-09-15 06:54:31 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-07] was not found
+2019-09-15 06:54:32 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-08] was not found
+2019-09-15 06:54:32 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-09] was not found
+2019-09-15 06:54:32 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-10] was not found
+2019-09-15 06:54:32 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-11] was not found
+2019-09-15 06:54:32 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-12] was not found
+2019-09-15 06:54:33 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-13] was not found
+2019-09-15 06:54:33 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-14] was not found
+2019-09-15 06:54:33 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-15] was not found
+2019-09-15 06:54:33 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-16] was not found
+2019-09-15 06:54:34 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-17] was not found
+2019-09-15 06:54:34 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-18] was not found
+2019-09-15 06:54:34 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-19] was not found
+2019-09-15 06:54:34 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-20] was not found
+2019-09-15 06:54:35 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-21] was not found
+2019-09-15 06:54:35 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-22] was not found
+2019-09-15 06:54:35 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-23] was not found
+2019-09-15 06:54:35 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-24] was not found
+2019-09-15 06:54:36 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-25] was not found
+2019-09-15 06:54:36 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-26] was not found
+2019-09-15 06:54:36 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-27] was not found
+2019-09-15 06:54:36 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-28] was not found
+2019-09-15 06:54:37 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-29] was not found
+2019-09-15 06:54:37 processor:119 saveBudget [WARNING]: daily [00003102:2019-09-30] was not found
+2019-09-15 06:54:38 processor:165 saveSales [WARNING]: daily [00003102:2019-08-23] was not found
+2019-09-15 06:54:38 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:38 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:38 processor:165 saveSales [WARNING]: daily [00003102:2019-08-26] was not found
+2019-09-15 06:54:39 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:39 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:39 processor:165 saveSales [WARNING]: daily [00003103:2019-09-04] was not found
+2019-09-15 06:54:39 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:39 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:39 processor:165 saveSales [WARNING]: daily [00003104:2019-09-04] was not found
+2019-09-15 06:54:40 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:40 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:40 processor:165 saveSales [WARNING]: daily [00003105:2019-09-04] was not found
+2019-09-15 06:54:40 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:40 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:40 processor:165 saveSales [WARNING]: daily [00003106:2019-09-04] was not found
+2019-09-15 06:54:40 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:41 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:41 processor:165 saveSales [WARNING]: daily [00003107:2019-09-04] was not found
+2019-09-15 06:54:41 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:41 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:41 processor:165 saveSales [WARNING]: daily [00003108:2019-09-04] was not found
+2019-09-15 06:54:41 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:41 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:41 processor:165 saveSales [WARNING]: daily [00003109:2019-09-04] was not found
+2019-09-15 06:54:42 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:42 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:42 processor:165 saveSales [WARNING]: daily [00003109:2019-09-10] was not found
+2019-09-15 06:54:42 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:42 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:42 processor:165 saveSales [WARNING]: daily [00003110:2019-09-04] was not found
+2019-09-15 06:54:43 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:43 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:43 processor:165 saveSales [WARNING]: daily [00004101:2019-09-04] was not found
+2019-09-15 06:54:43 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:43 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:43 processor:165 saveSales [WARNING]: daily [00004102:2019-09-04] was not found
+2019-09-15 06:54:43 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:43 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:43 processor:165 saveSales [WARNING]: daily [00004103:2019-08-27] was not found
+2019-09-15 06:54:44 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:44 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:44 processor:165 saveSales [WARNING]: daily [00004103:2019-09-04] was not found
+2019-09-15 06:54:44 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:44 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:44 processor:165 saveSales [WARNING]: daily [00004104:2019-09-04] was not found
+2019-09-15 06:54:45 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:45 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:45 processor:165 saveSales [WARNING]: daily [00004105:2019-09-04] was not found
+2019-09-15 06:54:45 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:45 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:45 processor:165 saveSales [WARNING]: daily [00004106:2019-09-04] was not found
+2019-09-15 06:54:45 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:45 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:46 processor:165 saveSales [WARNING]: daily [00004107:2019-09-04] was not found
+2019-09-15 06:54:46 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:46 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:46 processor:160 saveSales [WARNING]: shop [00004108] was not found
+2019-09-15 06:54:46 processor:165 saveSales [WARNING]: daily [00004108:2019-09-04] was not found
+2019-09-15 06:54:46 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:46 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:46 processor:165 saveSales [WARNING]: daily [00005102:2019-09-04] was not found
+2019-09-15 06:54:47 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:47 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:47 processor:165 saveSales [WARNING]: daily [00006101:2019-09-04] was not found
+2019-09-15 06:54:47 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:47 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:47 processor:165 saveSales [WARNING]: daily [00006102:2019-09-04] was not found
+2019-09-15 06:54:47 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:48 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:48 processor:165 saveSales [WARNING]: daily [00006103:2019-09-04] was not found
+2019-09-15 06:54:48 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:48 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:48 processor:165 saveSales [WARNING]: daily [00006104:2019-09-04] was not found
+2019-09-15 06:54:48 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:48 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:48 processor:165 saveSales [WARNING]: daily [00006106:2019-09-04] was not found
+2019-09-15 06:54:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:49 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:49 processor:165 saveSales [WARNING]: daily [00006107:2019-09-04] was not found
+2019-09-15 06:54:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:49 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:49 processor:165 saveSales [WARNING]: daily [00006108:2019-09-04] was not found
+2019-09-15 06:54:49 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:50 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:50 processor:160 saveSales [WARNING]: shop [00006109] was not found
+2019-09-15 06:54:50 processor:165 saveSales [WARNING]: daily [00006109:2019-09-04] was not found
+2019-09-15 06:54:50 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:50 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:50 processor:160 saveSales [WARNING]: shop [00006110] was not found
+2019-09-15 06:54:50 processor:165 saveSales [WARNING]: daily [00006110:2019-09-04] was not found
+2019-09-15 06:54:50 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:50 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:50 processor:165 saveSales [WARNING]: daily [00007103:2019-09-01] was not found
+2019-09-15 06:54:51 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:51 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:51 processor:165 saveSales [WARNING]: daily [00007103:2019-09-04] was not found
+2019-09-15 06:54:51 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:51 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:51 processor:165 saveSales [WARNING]: daily [00008101:2019-09-04] was not found
+2019-09-15 06:54:52 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:52 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:52 processor:165 saveSales [WARNING]: daily [00008102:2019-09-04] was not found
+2019-09-15 06:54:52 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:52 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:52 processor:165 saveSales [WARNING]: daily [00008103:2019-09-04] was not found
+2019-09-15 06:54:52 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:52 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:53 processor:165 saveSales [WARNING]: daily [00008105:2019-09-04] was not found
+2019-09-15 06:54:53 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:53 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:53 processor:165 saveSales [WARNING]: daily [00008106:2019-09-04] was not found
+2019-09-15 06:54:53 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:53 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:53 processor:165 saveSales [WARNING]: daily [00008107:2019-09-04] was not found
+2019-09-15 06:54:54 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:54 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:54 processor:165 saveSales [WARNING]: daily [00011101:2019-09-02] was not found
+2019-09-15 06:54:54 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:54 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:54 processor:165 saveSales [WARNING]: daily [00011101:2019-09-04] was not found
+2019-09-15 06:54:54 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:54 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:55 processor:165 saveSales [WARNING]: daily [00011102:2019-09-04] was not found
+2019-09-15 06:54:55 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:55 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:55 processor:165 saveSales [WARNING]: daily [00012101:2019-09-04] was not found
+2019-09-15 06:54:55 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:55 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:55 processor:165 saveSales [WARNING]: daily [00012101:2019-09-09] was not found
+2019-09-15 06:54:56 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:56 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:56 processor:165 saveSales [WARNING]: daily [00012102:2019-09-04] was not found
+2019-09-15 06:54:56 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:56 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:56 processor:165 saveSales [WARNING]: daily [00012103:2019-09-04] was not found
+2019-09-15 06:54:56 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:56 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:57 processor:165 saveSales [WARNING]: daily [00012105:2019-09-04] was not found
+2019-09-15 06:54:57 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:57 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:57 processor:165 saveSales [WARNING]: daily [00012106:2019-09-04] was not found
+2019-09-15 06:54:57 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:57 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:57 processor:165 saveSales [WARNING]: daily [00013101:2019-09-04] was not found
+2019-09-15 06:54:58 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:58 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:58 processor:165 saveSales [WARNING]: daily [00013102:2019-09-04] was not found
+2019-09-15 06:54:58 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:58 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:58 processor:165 saveSales [WARNING]: daily [00013103:2019-09-04] was not found
+2019-09-15 06:54:58 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:59 processor:165 saveSales [WARNING]: daily [00013104:2019-09-04] was not found
+2019-09-15 06:54:59 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:59 processor:165 saveSales [WARNING]: daily [00014101:2019-09-04] was not found
+2019-09-15 06:54:59 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:54:59 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:54:59 processor:165 saveSales [WARNING]: daily [00014102:2019-09-04] was not found
+2019-09-15 06:55:00 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:00 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:00 processor:165 saveSales [WARNING]: daily [00014103:2019-09-04] was not found
+2019-09-15 06:55:00 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:00 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:00 processor:165 saveSales [WARNING]: daily [00014104:2019-09-04] was not found
+2019-09-15 06:55:01 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:01 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:01 processor:165 saveSales [WARNING]: daily [00014105:2019-09-04] was not found
+2019-09-15 06:55:01 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:01 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:01 processor:160 saveSales [WARNING]: shop [00014106] was not found
+2019-09-15 06:55:01 processor:165 saveSales [WARNING]: daily [00014106:2019-09-04] was not found
+2019-09-15 06:55:01 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:02 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:02 processor:165 saveSales [WARNING]: daily [00015102:2019-09-04] was not found
+2019-09-15 06:55:02 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:02 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:02 processor:165 saveSales [WARNING]: daily [00015103:2019-09-04] was not found
+2019-09-15 06:55:02 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:02 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:02 processor:165 saveSales [WARNING]: daily [00016101:2019-09-04] was not found
+2019-09-15 06:55:03 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:03 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:03 processor:165 saveSales [WARNING]: daily [00021101:2019-09-04] was not found
+2019-09-15 06:55:03 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:03 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:03 processor:165 saveSales [WARNING]: daily [00022101:2019-08-08] was not found
+2019-09-15 06:55:04 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:04 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:04 processor:165 saveSales [WARNING]: daily [00022101:2019-08-10] was not found
+2019-09-15 06:55:04 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:04 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:04 processor:165 saveSales [WARNING]: daily [00022101:2019-08-14] was not found
+2019-09-15 06:55:04 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:04 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:04 processor:165 saveSales [WARNING]: daily [00022101:2019-08-17] was not found
+2019-09-15 06:55:05 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:05 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:05 processor:165 saveSales [WARNING]: daily [00022101:2019-08-18] was not found
+2019-09-15 06:55:05 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:05 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:05 processor:165 saveSales [WARNING]: daily [00022101:2019-08-19] was not found
+2019-09-15 06:55:06 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:06 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:06 processor:165 saveSales [WARNING]: daily [00022101:2019-08-22] was not found
+2019-09-15 06:55:06 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:06 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:06 processor:165 saveSales [WARNING]: daily [00022101:2019-08-24] was not found
+2019-09-15 06:55:06 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:06 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:06 processor:165 saveSales [WARNING]: daily [00022101:2019-08-25] was not found
+2019-09-15 06:55:07 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:07 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:07 processor:165 saveSales [WARNING]: daily [00022101:2019-09-04] was not found
+2019-09-15 06:55:07 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:07 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:07 processor:165 saveSales [WARNING]: daily [00023101:2019-09-04] was not found
+2019-09-15 06:55:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:08 processor:165 saveSales [WARNING]: daily [00023102:2019-09-04] was not found
+2019-09-15 06:55:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:08 processor:165 saveSales [WARNING]: daily [00024101:2019-09-04] was not found
+2019-09-15 06:55:08 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:08 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:09 processor:165 saveSales [WARNING]: daily [00028101:2019-09-04] was not found
+2019-09-15 06:55:09 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 06:55:09 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 06:55:09 main:72 <module> [INFO]: --- end session over 47.18 sec
+2019-09-15 07:00:09 main:59 <module> [INFO]: *** Start session[2]
+2019-09-15 07:00:09 main:72 <module> [INFO]: --- end session over 0.47 sec
+2019-09-15 07:05:09 main:59 <module> [INFO]: *** Start session[3]
+2019-09-15 07:05:10 main:72 <module> [INFO]: --- end session over 0.48 sec
+2019-09-15 07:08:14 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-09-15 07:08:14 main:59 <module> [INFO]: *** Start session[1]
+2019-09-15 07:08:14 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-01] was not found
+2019-09-15 07:08:15 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-02] was not found
+2019-09-15 07:08:15 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-03] was not found
+2019-09-15 07:08:15 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-04] was not found
+2019-09-15 07:08:15 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-05] was not found
+2019-09-15 07:08:16 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-06] was not found
+2019-09-15 07:08:16 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-07] was not found
+2019-09-15 07:08:16 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-08] was not found
+2019-09-15 07:08:16 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-09] was not found
+2019-09-15 07:08:17 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-10] was not found
+2019-09-15 07:08:17 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-11] was not found
+2019-09-15 07:08:17 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-12] was not found
+2019-09-15 07:08:17 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-13] was not found
+2019-09-15 07:08:18 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-14] was not found
+2019-09-15 07:08:18 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-15] was not found
+2019-09-15 07:08:18 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-16] was not found
+2019-09-15 07:08:18 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-17] was not found
+2019-09-15 07:08:18 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-18] was not found
+2019-09-15 07:08:19 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-19] was not found
+2019-09-15 07:08:19 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-20] was not found
+2019-09-15 07:08:19 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-21] was not found
+2019-09-15 07:08:19 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-22] was not found
+2019-09-15 07:08:20 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-23] was not found
+2019-09-15 07:08:20 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-24] was not found
+2019-09-15 07:08:20 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-25] was not found
+2019-09-15 07:08:20 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-26] was not found
+2019-09-15 07:08:21 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-27] was not found
+2019-09-15 07:08:21 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-28] was not found
+2019-09-15 07:08:21 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-29] was not found
+2019-09-15 07:08:21 processor:120 saveBudget [WARNING]: daily [00003101:2019-09-30] was not found
+2019-09-15 07:08:22 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-01] was not found
+2019-09-15 07:08:22 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-02] was not found
+2019-09-15 07:08:22 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-03] was not found
+2019-09-15 07:08:22 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-04] was not found
+2019-09-15 07:08:23 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-05] was not found
+2019-09-15 07:08:23 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-06] was not found
+2019-09-15 07:08:23 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-07] was not found
+2019-09-15 07:08:23 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-08] was not found
+2019-09-15 07:08:24 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-09] was not found
+2019-09-15 07:08:24 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-10] was not found
+2019-09-15 07:08:24 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-11] was not found
+2019-09-15 07:08:24 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-12] was not found
+2019-09-15 07:08:24 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-13] was not found
+2019-09-15 07:08:25 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-14] was not found
+2019-09-15 07:08:25 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-15] was not found
+2019-09-15 07:08:25 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-16] was not found
+2019-09-15 07:08:25 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-17] was not found
+2019-09-15 07:08:26 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-18] was not found
+2019-09-15 07:08:26 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-19] was not found
+2019-09-15 07:08:26 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-20] was not found
+2019-09-15 07:08:26 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-21] was not found
+2019-09-15 07:08:27 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-22] was not found
+2019-09-15 07:08:27 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-23] was not found
+2019-09-15 07:08:27 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-24] was not found
+2019-09-15 07:08:27 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-25] was not found
+2019-09-15 07:08:28 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-26] was not found
+2019-09-15 07:08:28 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-27] was not found
+2019-09-15 07:08:28 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-28] was not found
+2019-09-15 07:08:28 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-29] was not found
+2019-09-15 07:08:29 processor:120 saveBudget [WARNING]: daily [00003102:2019-09-30] was not found
+2019-09-15 07:08:30 processor:165 saveSales [WARNING]: daily [00003102:2019-08-23] was not found
+2019-09-15 07:08:30 processor:165 saveSales [WARNING]: daily [00003102:2019-08-26] was not found
+2019-09-15 07:08:30 processor:165 saveSales [WARNING]: daily [00003103:2019-09-04] was not found
+2019-09-15 07:08:30 processor:165 saveSales [WARNING]: daily [00003104:2019-09-04] was not found
+2019-09-15 07:08:31 processor:165 saveSales [WARNING]: daily [00003105:2019-09-04] was not found
+2019-09-15 07:08:31 processor:165 saveSales [WARNING]: daily [00003106:2019-09-04] was not found
+2019-09-15 07:08:31 processor:165 saveSales [WARNING]: daily [00003107:2019-09-04] was not found
+2019-09-15 07:08:31 processor:165 saveSales [WARNING]: daily [00003108:2019-09-04] was not found
+2019-09-15 07:08:31 processor:165 saveSales [WARNING]: daily [00003109:2019-09-04] was not found
+2019-09-15 07:08:31 processor:165 saveSales [WARNING]: daily [00003109:2019-09-10] was not found
+2019-09-15 07:08:32 processor:165 saveSales [WARNING]: daily [00003110:2019-09-04] was not found
+2019-09-15 07:08:32 processor:165 saveSales [WARNING]: daily [00004101:2019-09-04] was not found
+2019-09-15 07:08:32 processor:165 saveSales [WARNING]: daily [00004102:2019-09-04] was not found
+2019-09-15 07:08:32 processor:165 saveSales [WARNING]: daily [00004103:2019-08-27] was not found
+2019-09-15 07:08:32 processor:165 saveSales [WARNING]: daily [00004103:2019-09-04] was not found
+2019-09-15 07:08:32 processor:165 saveSales [WARNING]: daily [00004104:2019-09-04] was not found
+2019-09-15 07:08:33 processor:165 saveSales [WARNING]: daily [00004105:2019-09-04] was not found
+2019-09-15 07:08:33 processor:165 saveSales [WARNING]: daily [00004106:2019-09-04] was not found
+2019-09-15 07:08:33 processor:165 saveSales [WARNING]: daily [00004107:2019-09-04] was not found
+2019-09-15 07:08:33 processor:160 saveSales [WARNING]: shop [00004108] was not found
+2019-09-15 07:08:33 processor:165 saveSales [WARNING]: daily [00004108:2019-09-04] was not found
+2019-09-15 07:08:33 processor:165 saveSales [WARNING]: daily [00005102:2019-09-04] was not found
+2019-09-15 07:08:33 processor:165 saveSales [WARNING]: daily [00006101:2019-09-04] was not found
+2019-09-15 07:08:34 processor:165 saveSales [WARNING]: daily [00006102:2019-09-04] was not found
+2019-09-15 07:08:34 processor:165 saveSales [WARNING]: daily [00006103:2019-09-04] was not found
+2019-09-15 07:08:34 processor:165 saveSales [WARNING]: daily [00006104:2019-09-04] was not found
+2019-09-15 07:08:34 processor:165 saveSales [WARNING]: daily [00006106:2019-09-04] was not found
+2019-09-15 07:08:34 processor:165 saveSales [WARNING]: daily [00006107:2019-09-04] was not found
+2019-09-15 07:08:34 processor:165 saveSales [WARNING]: daily [00006108:2019-09-04] was not found
+2019-09-15 07:08:35 processor:160 saveSales [WARNING]: shop [00006109] was not found
+2019-09-15 07:08:35 processor:165 saveSales [WARNING]: daily [00006109:2019-09-04] was not found
+2019-09-15 07:08:35 processor:160 saveSales [WARNING]: shop [00006110] was not found
+2019-09-15 07:08:35 processor:165 saveSales [WARNING]: daily [00006110:2019-09-04] was not found
+2019-09-15 07:08:35 processor:165 saveSales [WARNING]: daily [00007103:2019-09-01] was not found
+2019-09-15 07:08:35 processor:165 saveSales [WARNING]: daily [00007103:2019-09-04] was not found
+2019-09-15 07:08:35 processor:165 saveSales [WARNING]: daily [00008101:2019-09-04] was not found
+2019-09-15 07:08:35 processor:165 saveSales [WARNING]: daily [00008102:2019-09-04] was not found
+2019-09-15 07:08:36 processor:165 saveSales [WARNING]: daily [00008103:2019-09-04] was not found
+2019-09-15 07:08:36 processor:165 saveSales [WARNING]: daily [00008105:2019-09-04] was not found
+2019-09-15 07:08:36 processor:165 saveSales [WARNING]: daily [00008106:2019-09-04] was not found
+2019-09-15 07:08:36 processor:165 saveSales [WARNING]: daily [00008107:2019-09-04] was not found
+2019-09-15 07:08:36 processor:165 saveSales [WARNING]: daily [00011101:2019-09-02] was not found
+2019-09-15 07:08:36 processor:165 saveSales [WARNING]: daily [00011101:2019-09-04] was not found
+2019-09-15 07:08:37 processor:165 saveSales [WARNING]: daily [00011102:2019-09-04] was not found
+2019-09-15 07:08:37 processor:165 saveSales [WARNING]: daily [00012101:2019-09-04] was not found
+2019-09-15 07:08:37 processor:165 saveSales [WARNING]: daily [00012101:2019-09-09] was not found
+2019-09-15 07:08:37 processor:165 saveSales [WARNING]: daily [00012102:2019-09-04] was not found
+2019-09-15 07:08:37 processor:165 saveSales [WARNING]: daily [00012103:2019-09-04] was not found
+2019-09-15 07:08:37 processor:165 saveSales [WARNING]: daily [00012105:2019-09-04] was not found
+2019-09-15 07:08:38 processor:165 saveSales [WARNING]: daily [00012106:2019-09-04] was not found
+2019-09-15 07:08:38 processor:165 saveSales [WARNING]: daily [00013101:2019-09-04] was not found
+2019-09-15 07:08:38 processor:165 saveSales [WARNING]: daily [00013102:2019-09-04] was not found
+2019-09-15 07:08:38 processor:165 saveSales [WARNING]: daily [00013103:2019-09-04] was not found
+2019-09-15 07:08:38 processor:165 saveSales [WARNING]: daily [00013104:2019-09-04] was not found
+2019-09-15 07:08:38 processor:165 saveSales [WARNING]: daily [00014101:2019-09-04] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00014102:2019-09-04] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00014103:2019-09-04] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00014104:2019-09-04] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00014105:2019-09-04] was not found
+2019-09-15 07:08:39 processor:160 saveSales [WARNING]: shop [00014106] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00014106:2019-09-04] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00015102:2019-09-04] was not found
+2019-09-15 07:08:39 processor:165 saveSales [WARNING]: daily [00015103:2019-09-04] was not found
+2019-09-15 07:08:40 processor:165 saveSales [WARNING]: daily [00016101:2019-09-04] was not found
+2019-09-15 07:08:40 processor:165 saveSales [WARNING]: daily [00021101:2019-09-04] was not found
+2019-09-15 07:08:40 processor:165 saveSales [WARNING]: daily [00022101:2019-08-08] was not found
+2019-09-15 07:08:40 processor:165 saveSales [WARNING]: daily [00022101:2019-08-10] was not found
+2019-09-15 07:08:40 processor:165 saveSales [WARNING]: daily [00022101:2019-08-14] was not found
+2019-09-15 07:08:40 processor:165 saveSales [WARNING]: daily [00022101:2019-08-17] was not found
+2019-09-15 07:08:41 processor:165 saveSales [WARNING]: daily [00022101:2019-08-18] was not found
+2019-09-15 07:08:41 processor:165 saveSales [WARNING]: daily [00022101:2019-08-19] was not found
+2019-09-15 07:08:41 processor:165 saveSales [WARNING]: daily [00022101:2019-08-22] was not found
+2019-09-15 07:08:41 processor:165 saveSales [WARNING]: daily [00022101:2019-08-24] was not found
+2019-09-15 07:08:41 processor:165 saveSales [WARNING]: daily [00022101:2019-08-25] was not found
+2019-09-15 07:08:41 processor:165 saveSales [WARNING]: daily [00022101:2019-09-04] was not found
+2019-09-15 07:08:42 processor:165 saveSales [WARNING]: daily [00023101:2019-09-04] was not found
+2019-09-15 07:08:42 processor:165 saveSales [WARNING]: daily [00023102:2019-09-04] was not found
+2019-09-15 07:08:42 processor:165 saveSales [WARNING]: daily [00024101:2019-09-04] was not found
+2019-09-15 07:08:42 processor:165 saveSales [WARNING]: daily [00028101:2019-09-04] was not found
+2019-09-15 07:08:42 notify:74 notify [INFO]: send notify to [takoparadise2007@yahoo.co.jp]
+2019-09-15 07:08:43 notify:74 notify [INFO]: send notify to [sekitakovich@softbank.ne.jp]
+2019-09-15 07:08:43 main:72 <module> [INFO]: --- end session over 28.87 sec
