@@ -148,6 +148,12 @@ class Processor(object):
             mlot: int = int(item[9])
             myen: int = int(item[10])
             welcome: int = int(item[11])
+
+            '''
+            「前受金」として以下2項目追加 2019-10-26
+            '''
+            apay: int = int(item[12])
+            atotal: int = int(item[13])
             pass
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
@@ -182,6 +188,8 @@ class Processor(object):
                     'open': 1,
                     'dtp': shop,
                     'udate': udate,
+                    'apay': apay,
+                    'atotal': atotal,
                 }
 
                 if self.pglib.update(table='daily', kv=kv, id=dailyID):

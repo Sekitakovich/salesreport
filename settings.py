@@ -7,6 +7,7 @@ class Settings(object):
 
     class FTP(object):
 
+        # server: str = 'bsm05.dtpnet.co.jp'  # target
         server: str = 'ap01.dtpnet.co.jp'  # notice, testserver
 
         username: str = 'sr168'
@@ -23,8 +24,10 @@ class Settings(object):
 
     class PostgreSQL(object):
 
-        host: str = 'localhost'
+        # dbname: str = 'hpfmaster'
         dbname: str = 'next'
+
+        host: str = 'localhost'
         user: str = 'postgres'
         password: str = 'postgres'
         port: int = 5432
