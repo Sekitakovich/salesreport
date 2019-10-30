@@ -2,7 +2,7 @@
 <dwsync>
 <file name="common.js" server="master.hpfrance.com/www/" local="132111089432945083" remote="132169004850000000" Dst="0" />
 <file name="php.js" server="master.hpfrance.com/www/" local="132111089433225742" remote="132169004850000000" Dst="0" />
-<file name="hpfmaster.inc" server="master.hpfrance.com/www/" local="132121440209084355" remote="132121440250000000" Dst="0" />
+<file name="hpfmaster.inc" server="master.hpfrance.com/www/" local="132169034674868721" remote="132169034720000000" Dst="0" />
 <file name="prototype.js" server="master.hpfrance.com/www/" local="132111089433264866" remote="132169004850000000" Dst="0" />
 <file name="proto.menu.css" server="master.hpfrance.com/www/" local="132111089433236691" remote="132169020810000000" Dst="0" />
 <file name="proto.menu.js" server="master.hpfrance.com/www/" local="132111089433244471" remote="132169020810000000" Dst="0" />
@@ -13,6 +13,6 @@
 <file name="pglib.py" server="master.hpfrance.com/www/" local="132139697897385813" remote="132139932700000000" Dst="0" />
 <file name="processor.py" server="master.hpfrance.com/www/" local="132132775277361631" remote="132132775630000000" Dst="0" />
 <file name="retrieve.py" server="master.hpfrance.com/www/" local="132132762558388682" remote="132132775650000000" Dst="0" />
-<file name="settings.py" server="master.hpfrance.com/www/" local="132131526997446428" remote="132131596130000000" Dst="0" />
+<file name="settings.py" server="master.hpfrance.com/www/" local="132169032665371500" remote="132169032970000000" Dst="0" />
 <file name="notify.py" server="master.hpfrance.com/www/" local="132122928899136620" remote="132129321690000000" Dst="0" />
 </dwsync>
