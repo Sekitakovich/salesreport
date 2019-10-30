@@ -583,6 +583,9 @@ for($a=1; $a<=31; $a++){
 			$target = $vo['target'];
 			$last = $vo['last'];
 			$book = $vo['book'];
+			$booktotal = $vo['booktotal']; // 2019-10-30
+			$apay = $vo['apay']; // 2019-10-30
+			$atotal = $vo['atotal']; // 2019-10-30
 			$member = $vo['member'];
 			$visitor = $vo['visitor']; $welcome = $vo['welcome']; // 2018-04-01
 			$comment = $vo['note'];
@@ -649,7 +652,10 @@ for($a=1; $a<=31; $a++){
 				'dname'=>$dname,'aname'=>$aname,
 				'cavg'=>$cavg,'ys'=>$ys,'odate'=>$oDate,
 				'comment'=>$comment,'event'=>$event,'open'=>$open,'entered'=>$entered,'etime'=>$etime,
-				'welcome'=>$welcome,'wsum'=>$wSum
+				'welcome'=>$welcome,'wsum'=>$wSum,
+				'booktotal'=>$booktotal, // 2019-10-30
+				'apay'=>$apay, // 2019-10-30
+				'atotal'=>$atotal, // 2019-10-30
 			);
 		}
 //Var_dump::display($data);
@@ -700,6 +706,8 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td width="1%" class="th-edit">昨対比</td>
 						<td width="95%" class="th-edit">取りおき</td>
 						<td width="95%" class="th-edit">取りおき計</td>
+						<td width="1%" class="th-edit">前受金</td>
+						<td width="1%" class="th-edit">前受計</td>
 						<td width="1%" class="th-edit">接客回数</td>
 						<td width="1%" class="th-edit">接客累計</td>
 						<td width="1%" class="th-edit">客数</td>
@@ -765,6 +773,9 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 		$target = $qo['target'];
 		$last = $qo['last'];
 		$book = $qo['book'];
+		$booktotal = $qo['booktotal']; // 2019-10-30
+		$apay = $qo['apay']; // 2019-10-30
+		$atotal = $qo['atotal']; // 2019-10-30
 		$rSum += $result;
 		$tSum += $target;
 		$lSum += $last;
@@ -830,7 +841,9 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="td-editDigit" title="達成率"><?php printf("%s",number_format($win,2)); ?>％</td>
 						<td class="td-editDigit" title="昨対比"><?php printf("%s",number_format($ppy,2)); ?>％</td>
 						<td class="td-editDigit" title="取りおき"><?php printf("%s",number_format($book,0)); ?></td>
-						<td class="td-editDigit" title="取りおき計"><?php printf("%s",number_format($__bSum,0)); ?></td>
+						<td class="td-editDigit" title="取りおき計"><?php printf("%s",number_format($booktotal,0)); // 2019-10-30 ?></td>
+						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($apay,0)); ?></td>
+						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($atotal,0)); ?></td>
 						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($welcome,0)); ?></td>
 						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($__wSum,0)); ?></td>
 						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($visitor,0)); ?></td>
@@ -864,8 +877,10 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="th-editDigit"><?php printf("%s",number_format($rrSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($zSum,2)); ?>％</td>
 						<td class="th-editDigit"><?php printf("%s",number_format($opSum,2)); ?>％</td> <?php // なぜかopSumを出していた (2009-12-24) がこれで良いのだと(怒) ?>
-						<td class="th-editDigit"><?php printf("%s",number_format($bSum,0)); ?></td>
-						<td class="th-editDigit"><?php printf("%s",number_format($bbSum,0)); ?></td>
+						<td class="th-editDigit"><?php echo(""); // 2019-10-30 ?></td>
+						<td class="th-editDigit"><?php echo(""); // 2019-10-30 ?></td>
+						<td class="th-editDigit">&nbsp;</td>
+						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit"><?php printf("%s",number_format($wSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($wwSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($vSum,0)); ?></td>

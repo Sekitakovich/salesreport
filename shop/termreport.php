@@ -1156,6 +1156,9 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td width="1%" class="th-edit">達成率</td>
 						<td width="1%" class="th-edit">昨対比</td>
 						<td width="95%" class="th-edit">取りおき</td>
+						<td width="1%" class="th-edit">取りおき計</td>
+						<td width="1%" class="th-edit">前受金</td>
+						<td width="1%" class="th-edit">前受計</td>
 						<td width="1%" class="th-edit">顧客カード</td>
 						<td width="1%" class="th-edit">顧客買上数</td>
 						<td width="1%" class="th-edit">顧客買上金額</td>
@@ -1242,6 +1245,9 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="td-editDigit" title="達成率"><?php printf("%s",number_format($win,2)); ?>％</td>
 						<td class="td-editDigit" title="昨対比"><?php printf("%s",number_format($ppy,2)); ?>％</td>
 						<td class="td-editDigit" title="取りおき"><?php printf("%s",number_format($book,0)); ?></td>
+						<td class="td-editDigit" title="顧客">&nbsp;</td>
+						<td class="td-editDigit" title="顧客">&nbsp;</td>
+						<td class="td-editDigit" title="顧客">&nbsp;</td>
 						<td class="td-editDigit" title="顧客"><?php printf("%s",number_format($member,0)); ?></td>
 						<td class="td-editDigit" title="客計"><?php printf("%s",number_format($mlot,0)); ?></td>
 						<td class="td-editDigit" title="客計"><?php printf("%s",number_format($myen,0)); ?></td>
@@ -1264,7 +1270,10 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit">(<?php printf("%s",number_format($zSum,2)); ?>％)</td>
 						<td class="th-editDigit">(<?php printf("%s",number_format($opSum,2)); ?>％)</td>
-						<td class="th-editDigit"><?php printf("%s",number_format($bSum,0)); ?></td>
+						<td class="th-editDigit">&nbsp;</td>
+						<td class="th-editDigit">&nbsp;</td>
+						<td class="th-editDigit">&nbsp;</td>
+						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mlSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mySum,0)); ?></td>
