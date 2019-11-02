@@ -1,5 +1,6 @@
 from typing import List, Dict
 from datetime import datetime as dt
+from datetime import timedelta
 import logging
 import shutil
 # from dataclasses import dataclass
@@ -139,7 +140,7 @@ class Processor(object):
     def saveSales(self, *, item: list) -> bool:
 
         udate: str = dt.now().strftime(self.timeformat)
-        today: str = dt.now().strftime(self.dateformat)
+        today: str = (dt.now() + timedelta(days=0)).strftime(self.dateformat)
         completed: bool = True
 
         try:

@@ -6,9 +6,11 @@ session_start();
 
 $pgconnect = "dbname=hpfmaster user=postgres password=postgres";
 
-if($_SERVER['PHP_AUTH_USER'] == 'cvtester'){
+/*
+if($_SERVER['PHP_AUTH_USER'] == 'k-seki'){
 	$pgconnect = "dbname=next user=postgres password=postgres";
 }
+*/
 
 $__XHTMLselected  = "selected=\"selected\"";
 $__XHTMLchecked   = "checked=\"checked\"";

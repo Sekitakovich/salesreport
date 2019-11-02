@@ -41,7 +41,7 @@ if($handle=pg_connect($pgconnect)){
 		$days = ($ue-$us)/$secDay; // 通算日数
 		$week = date("w",$us); // 開始曜日
 		$csv = array(); // 一覧
-		$csv[] = "店舗名,日付,昨年,予算,売上,取りおき,顧客カード,顧客買上数,顧客買上金額,接客回数,客数";
+		$csv[] = "店舗名,日付,昨年,予算,売上,取りおき,前受金,顧客カード,顧客買上数,顧客買上金額,接客回数,客数";
 
 ?>
 <p class="title1">店舗別日別詳細 <?php printf("%s ～ %s",date("Y年n月j日",$us),date("Y年n月j日",$ue)); ?>
@@ -78,6 +78,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td width="5%" class="th-edit">達成率</td>
 						<td width="5%" class="th-edit">昨対比</td>
 						<td width="5%" class="th-edit">取りおき</td>
+						<td width="5%" class="th-edit">前受金</td>
 						<td width="3%" class="th-edit">顧客カード</td>
 						<td width="3%" class="th-edit">顧客買上数</td>
 						<td width="3%" class="th-edit">顧客買上金額</td>
@@ -124,7 +125,8 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 				$result = $qo['result'];
 				$target = $qo['target'];
 				$last = $qo['last'];
-				$book = $qo['book'];
+				$book = $qo['booktotal'];
+				$apay = $qo['atotal'];
 				$member = $qo['member'];
 				$mlot = $qo['mlot'];
 				$myen = $qo['myen'];
@@ -158,6 +160,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 				$target = 0;
 				$last = 0;
 				$book = 0;
+				$apay = 0;
 				$member = 0;
 				$mlot = 0;
 				$myen = 0;
@@ -173,7 +176,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 			}
 
 //			$line = array($so['name'],date("Y/m/d",$us+($secDay*$a)),$last,$target,$result,$book,$member,$mlsum,$mysum,$visitor);
-			$line = array($so['name'],date("Y/m/d",$us+($secDay*$a)),$last,$target,$result,$book,$member,$mlot,$myen,$welcome,$visitor);
+			$line = array($so['name'],date("Y/m/d",$us+($secDay*$a)),$last,$target,$result,$book,$apay,$member,$mlot,$myen,$welcome,$visitor);
 			$csv[] = implode(",",$line);
 //Var_dump::display($line);
 			$query = sprintf("select * from holiday where vf=true and yyyymmdd=(cast('%s' as date)+cast('%d day' as interval))",$ps,$a);
@@ -193,6 +196,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="td-editDigit" title="達成率"><?php printf("%s",number_format($win,2)); ?>％</td>
 						<td class="td-editDigit" title="昨対比"><?php printf("%s",number_format($ppy,2)); ?>％</td>
 						<td class="td-editDigit" title="取りおき"><?php printf("%s",number_format($book,0)); ?></td>
+						<td class="td-editDigit" title="取りおき"><?php printf("%s",number_format($apay,0)); ?></td>
 						<td class="td-editDigit" title="顧客"><?php printf("%s",number_format($member)); ?></td>
 						<td class="td-editDigit" title="客計"><?php printf("%s",number_format($mlot)); ?></td>
 						<td class="td-editDigit" title="客計"><?php printf("%s",number_format($myen,0)); ?></td>
@@ -215,7 +219,8 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="th-editDigit"><?php printf("%s",number_format($rSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($zSum,2)); ?>％</td>
 						<td class="th-editDigit"><?php printf("%s",number_format($pSum,2)); ?>％</td>
-						<td class="th-editDigit"><?php printf("%s",number_format($bSum,0)); ?></td>
+						<td class="th-editDigit">&nbsp;</td>
+						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mlSum,0)); ?></td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mySum,0)); ?></td>
@@ -898,7 +903,8 @@ for($a=1; $a<=31; $a++){
 			 "sum(daily.member) as member",
 			 "sum(daily.welcome) as welcome",
 			 "sum(daily.visitor) as visitor",
-			 "sum(daily.book) as book",
+//			 "sum(daily.book) as book",
+//			 "sum(daily.apay) as apay",
 			 "sum(daily.mlot) as mlot",
 			 "sum(daily.myen) as myen",
 			"shop.id",
@@ -1010,7 +1016,8 @@ for($a=1; $a<=31; $a++){
 				$result = $qo['result'];
 				$target = $qo['target'];
 				$last = $qo['last'];
-				$book = $qo['book'];
+//				$book = $qo['book'];
+//				$apay = $qo['apay'];
 				$member = $qo['member'];
 				$welcome = $qo['welcome'];
 				$visitor = $qo['visitor'];
@@ -1024,12 +1031,19 @@ for($a=1; $a<=31; $a++){
 				$ppy = $last? ((float)$result/(float)$last)*100.0:0;
 		
 	//
+				$query = sprintf("select booktotal,atotal from daily where vf=true and shop=%d and yyyymmdd='%s'",$id,implode("-",$pe));
+				$sr = pg_query($handle,$query);
+				$so = pg_fetch_array($sr);
+				$book = $so['booktotal'];
+				$apay = $so['atotal'];
+//				echo($query);
+				
 				$data[] = array(
 					'id'=>$id,'name'=>$name,'ps'=>$ps,
 					'dw'=>$dw,'aw'=>$aw,'tw'=>$tw,'sid'=>$qo['id'],
 					'dname'=>$dname,'aname'=>$aname,
 					'ys'=>$ys,
-					'result'=>$result,'target'=>$target,'last'=>$last,'book'=>$book,'member'=>$member,'visitor'=>$visitor,'welcome'=>$welcome,
+					'result'=>$result,'target'=>$target,'last'=>$last,'book'=>$book,'apay'=>$apay,'member'=>$member,'visitor'=>$visitor,'welcome'=>$welcome,
 					'win'=>$win,'ppy'=>$ppy,
 					'cavg'=>$cavg,'ravg'=>$ravg,
 					'mlot'=>$mlot,'myen'=>$myen,
@@ -1156,9 +1170,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td width="1%" class="th-edit">達成率</td>
 						<td width="1%" class="th-edit">昨対比</td>
 						<td width="95%" class="th-edit">取りおき</td>
-						<td width="1%" class="th-edit">取りおき計</td>
 						<td width="1%" class="th-edit">前受金</td>
-						<td width="1%" class="th-edit">前受計</td>
 						<td width="1%" class="th-edit">顧客カード</td>
 						<td width="1%" class="th-edit">顧客買上数</td>
 						<td width="1%" class="th-edit">顧客買上金額</td>
@@ -1182,7 +1194,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 	$mySum = 0;
 
 	$csvMIN = array(); // for export
-	$csvMIN[] = "店舗名,昨年,予算,売上,取りおき,顧客カード,顧客買上数,顧客買上金額,接客回数,客数";
+	$csvMIN[] = "店舗名,昨年,予算,売上,取りおき,前受金,顧客カード,顧客買上数,顧客買上金額,接客回数,客数";
 			
 	$cavgSum = 0; // 2018-04-02
 	
@@ -1198,6 +1210,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 		$target = $qo['target'];
 		$last = $qo['last'];
 		$book = $qo['book'];
+		$apay = $qo['apay'];
 		$rSum += $result;
 		$tSum += $target;
 		$lSum += $last;
@@ -1226,7 +1239,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 		}
 
 //		$line = array($qo['name'],$last,$target,$result,$book,$member,$mlsum,$mysum,$visitor);
-		$line = array($qo['name'],$last,$target,$result,$book,$member,$mlot,$myen,$welcome,$visitor);
+		$line = array($qo['name'],$last,$target,$result,$book,$apay,$member,$mlot,$myen,$welcome,$visitor);
 		$csvMIN[] = implode(",",$line);
 		
 		$event = $evdata[$sid];
@@ -1245,9 +1258,7 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="td-editDigit" title="達成率"><?php printf("%s",number_format($win,2)); ?>％</td>
 						<td class="td-editDigit" title="昨対比"><?php printf("%s",number_format($ppy,2)); ?>％</td>
 						<td class="td-editDigit" title="取りおき"><?php printf("%s",number_format($book,0)); ?></td>
-						<td class="td-editDigit" title="顧客">&nbsp;</td>
-						<td class="td-editDigit" title="顧客">&nbsp;</td>
-						<td class="td-editDigit" title="顧客">&nbsp;</td>
+						<td class="td-editDigit" title="顧客"><?php printf("%s",number_format($apay,0)); ?></td>
 						<td class="td-editDigit" title="顧客"><?php printf("%s",number_format($member,0)); ?></td>
 						<td class="td-editDigit" title="客計"><?php printf("%s",number_format($mlot,0)); ?></td>
 						<td class="td-editDigit" title="客計"><?php printf("%s",number_format($myen,0)); ?></td>
@@ -1270,8 +1281,6 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit">(<?php printf("%s",number_format($zSum,2)); ?>％)</td>
 						<td class="th-editDigit">(<?php printf("%s",number_format($opSum,2)); ?>％)</td>
-						<td class="th-editDigit">&nbsp;</td>
-						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit">&nbsp;</td>
 						<td class="th-editDigit"><?php printf("%s",number_format($mSum,0)); ?></td>
