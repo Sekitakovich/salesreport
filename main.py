@@ -43,7 +43,7 @@ if __name__ == '__main__':
     oneshot: bool = args.oneshot
 
     ftpDTP = Retriever(server=ftpserver, username=username, password=password, folder=defaultfolder, workpath=workpath)
-    processor = Processor(workpath=workpath, savepath=savepath)
+    processor = Processor(workpath=workpath, savepath=savepath, todayOnly=True)  # 暫定措置
     cleaner = Cleaner()
 
     logger.info(msg='=== CV -> Salesreport autoimport system version %s was started' % (Settings.INFO.version))

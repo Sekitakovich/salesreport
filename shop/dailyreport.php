@@ -842,8 +842,8 @@ if($whoami['perm']&PERM_EXPORT_CSV){
 						<td class="td-editDigit" title="昨対比"><?php printf("%s",number_format($ppy,2)); ?>％</td>
 						<td class="td-editDigit" title="取りおき"><?php printf("%s",number_format($book,0)); ?></td>
 						<td class="td-editDigit" title="取りおき計"><?php printf("%s",number_format($booktotal,0)); // 2019-10-30 ?></td>
-						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($apay,0)); ?></td>
-						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($atotal,0)); ?></td>
+						<td class="td-editDigit" title="前受金"><?php printf("%s",number_format($apay,0)); ?></td>
+						<td class="td-editDigit" title="前受計"><?php printf("%s",number_format($atotal,0)); ?></td>
 						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($welcome,0)); ?></td>
 						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($__wSum,0)); ?></td>
 						<td class="td-editDigit" title="客数"><?php printf("%s",number_format($visitor,0)); ?></td>

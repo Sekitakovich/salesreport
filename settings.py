@@ -24,8 +24,8 @@ class Settings(object):
 
     class PostgreSQL(object):
 
-        dbname: str = 'hpfmaster'  # 2019-10-30 19:00
-        # dbname: str = 'next'
+        # dbname: str = 'hpfmaster'  # 2019-10-30 19:00
+        dbname: str = 'next'
 
         host: str = 'localhost'
         user: str = 'postgres'

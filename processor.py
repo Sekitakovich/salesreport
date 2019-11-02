@@ -27,7 +27,7 @@ from notify import NotifyMail
 
 class Processor(object):
 
-    def __init__(self, *, workpath: str, savepath: str):
+    def __init__(self, *, workpath: str, savepath: str, todayOnly: bool = False):
 
         self.workpath: str = workpath
         self.savepath: str = savepath
@@ -45,6 +45,8 @@ class Processor(object):
         self.errorList: List[str] = []
 
         self.matchTable: Dict[str, int] = {}
+
+        self.todayOnly = todayOnly  # 暫定措置として本日のSALESだけを扱う
 
     def wanted(self):
         """
@@ -130,6 +132,7 @@ class Processor(object):
     def saveSales(self, *, item: list) -> bool:
 
         udate: str = dt.now().strftime(self.timeformat)
+        today: str = dt.now().strftime(self.dateformat)
         completed: bool = False
 
         try:
@@ -154,46 +157,51 @@ class Processor(object):
             '''
             apay: int = int(item[12])
             atotal: int = int(item[13])
+
             pass
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
         else:
+            just: bool = (yyyymmdd == today)
             if shop:
-                shopID = 0
-                if shop in self.matchTable.keys():
-                    shopID: int = self.matchTable[shop]
-                else:  # 店舗未登録
-                    self.logger.warning(msg='shop [%s] was not found' % (shop,))
-                    self.errorList.append('shop [%s] was not found' % (shop,))
+                if (self.todayOnly is False) or just:
+                    shopID = 0
+                    if shop in self.matchTable.keys():
+                        shopID: int = self.matchTable[shop]
+                    else:  # 店舗未登録
+                        self.logger.warning(msg='shop [%s] was not found' % (shop,))
+                        self.errorList.append('shop [%s] was not found' % (shop,))
 
-                dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
-                if dailyID == 0:
-                    self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
-                    self.errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
+                    dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
+                    if dailyID == 0:
+                        self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+                        self.errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
 
-                kv = {
-                    'yyyymmdd': yyyymmdd,
-                    'shop': shopID,
-                    'member': member,
-                    'visitor': visitor,
-                    'etime': etime,
-                    'result': result,
-                    'book': book,
-                    'booktotal': booktotal,
-                    'mlot': mlot,
-                    'myen': myen,
-                    'welcome': welcome,
-                    'note': note,  # notice
-                    'entered': 1,
-                    'open': 1,
-                    'dtp': shop,
-                    'udate': udate,
-                    'apay': apay,
-                    'atotal': atotal,
-                }
+                    kv = {
+                        'yyyymmdd': yyyymmdd,
+                        'shop': shopID,
+                        'member': member,
+                        'visitor': visitor,
+                        'etime': etime,
+                        'result': result,
+                        'book': book,
+                        'booktotal': booktotal,
+                        'mlot': mlot,
+                        'myen': myen,
+                        'welcome': welcome,
+                        'note': note,  # notice
+                        'entered': 1,
+                        'open': 1,
+                        'dtp': shop,
+                        'udate': udate,
+                        'apay': apay,
+                        'atotal': atotal,
+                    }
 
-                if self.pglib.update(table='daily', kv=kv, id=dailyID):
-                    completed = True
+                    if self.pglib.update(table='daily', kv=kv, id=dailyID):
+                        completed = True
+                else:
+                    self.logger.critical(msg='void this cause ymd [%s] is not [%s]' % (yyyymmdd, today))
             else:
                 self.logger.critical(msg='void this cause no shopcode')
 
@@ -231,4 +239,11 @@ class Processor(object):
 
             if len(self.errorList):
                 self.nofity.notify(item=self.errorList)
+
+
+if __name__ == '__main__':
+
+    processor = Processor(workpath='work', savepath='fromCV', todayOnly=True)
+
+    processor.importCV(filename='20191102025600_SALES.csv', type='S')
 

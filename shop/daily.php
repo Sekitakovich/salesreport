@@ -451,18 +451,20 @@ function checkTheList(F)
 //
 
 	for($a=0,$d=1; $d<=$days; $a++,$d++,$dow++){
-		$query = sprintf("select * from daily where vf=true and shop='%d' and yyyymmdd='%d-%d-%d'",$thisShop['id'],$thisY,$thisM,$d);
+		$query = sprintf("select * from daily where vf=true and shop='%d' and 
+		yyyymmdd='%d-%d-%d'",$thisShop['id'],$thisY,$thisM,$d);
 		$qr = pg_query($handle,$query);
+		?><!-- <?php echo($query); ?> --><?php
 		if($qs = pg_num_rows($qr)){
 			$qo = pg_fetch_array($qr);
-//			$target = $qo['target'];
-//			$result = $qo['result'];
-//			$book = $qo['book'];
-//			$last = $qo['last'];
-			$target = $qo['tbase'];
-			$result = $qo['rbase'];
-			$book = $qo['bbase'];
-			$last = $qo['lbase'];
+			$target = $qo['target'];
+			$result = $qo['result'];
+			$book = $qo['book'];
+			$last = $qo['last'];
+//			$target = $qo['tbase'];
+//			$result = $qo['rbase'];
+//			$book = $qo['bbase'];
+//			$last = $qo['lbase'];
 			$member = $qo['member'];
 			$welcome = $qo['welcome'];
 			$visitor = $qo['visitor'];
