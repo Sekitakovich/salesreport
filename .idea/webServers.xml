@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3323ea37-8c78-47b9-a82d-c955d945fcbf" name="master.hpfrance.om" url="http://master.hpfrance.com">
+        <fileTransfer host="master.hpfrance.com" port="22" privateKey="C:\Users\PC\PycharmProjects\salesreport\SSH\master.hpfrance.com.ppk" rootFolder="/home/ec2-user/www" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

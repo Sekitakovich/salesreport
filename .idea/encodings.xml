@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Documents/連携テスト手順.txt" charset="windows-31j" />
+    <file url="file://$PROJECT_DIR$/fromCV/20190910160013_SALES.csv" charset="windows-31j" />
+    <file url="file://$PROJECT_DIR$/withCV/0914/20190910160013_SALES.csv" charset="windows-31j" />
+    <file url="file://$PROJECT_DIR$/withCV/0914/20190910171524_BUDGET.csv" charset="windows-31j" />
+    <file url="file://$PROJECT_DIR$/withCV/0914/sjis.txt" charset="windows-31j" />
+    <file url="file://$PROJECT_DIR$/withCV/sampledata/20190809183719_SALES.csv" charset="windows-31j" />
+  </component>
+</project>

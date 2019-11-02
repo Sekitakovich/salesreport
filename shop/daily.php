@@ -70,6 +70,7 @@ if($handle=pg_connect($pgconnect)){
 			$set[] = sprintf("open=%s",isset($open[$a])? "false":"true");
 			$set[] = sprintf("ua='%s'",pg_escape_string($_SERVER['HTTP_USER_AGENT']));
 			$set[] = sprintf("ipaddress='%s'",$_SERVER['REMOTE_ADDR']);
+			$set[] = sprintf("dtp='%s'",$thisShop['dtp']); // 2019-11-02
 			$query = sprintf("update daily set %s where id='%d'",implode(",",$set),$id);
 			$qr = pg_query($handle,$query);
 ?><!-- <?php printf("Query (%d) [ %s ]\n",$qr,$query); ?> --><?php
@@ -113,6 +114,7 @@ if($handle=pg_connect($pgconnect)){
 		$set[] = sprintf("note='%s'",pg_escape_string($_REQUEST['note']));
 			$set[] = sprintf("ua='%s'",pg_escape_string($_SERVER['HTTP_USER_AGENT']));
 			$set[] = sprintf("ipaddress='%s'",$_SERVER['REMOTE_ADDR']);
+			$set[] = sprintf("dtp='%s'",$thisShop['dtp']); // 2019-11-02
 		$set[] = sprintf("entered=true");
 		$set[] = sprintf("etime=now()");
 		$set[] = sprintf("myen='%d'",$_REQUEST['myen']);

@@ -115,15 +115,22 @@ class Processor(object):
             if shop in self.matchTable.keys():
                 shopID: int = self.matchTable[shop]
             else:  # 店舗未登録
-                self.logger.warning(msg='shop [%s] was not found' % (shop,))
+                self.logger.critical(msg='shop [%s] was not found' % (shop,))
 
             dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
             if dailyID == 0:
-                self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+                self.logger.debug(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
                 kv = {'dtp': shop}
                 dailyID = self.pglib.update(table='daily', kv=kv, id=0)
 
-            kv = {'target': target, 'last': last, 'shop': shopID, 'yyyymmdd': yyyymmdd, 'udate': udate}
+            kv = {
+                'target': target,
+                'last': last,
+                'shop': shopID,
+                'yyyymmdd': yyyymmdd,
+                'imported': 1,
+                'udate': udate,
+            }
             if self.pglib.update(table='daily', kv=kv, id=dailyID):
                 completed = True
 
@@ -170,12 +177,12 @@ class Processor(object):
                     if shop in self.matchTable.keys():
                         shopID: int = self.matchTable[shop]
                     else:  # 店舗未登録
-                        self.logger.warning(msg='shop [%s] was not found' % (shop,))
+                        self.logger.critical(msg='shop [%s] was not found' % (shop,))
                         self.errorList.append('shop [%s] was not found' % (shop,))
 
                     dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
                     if dailyID == 0:
-                        self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
+                        self.logger.debug(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
                         # self.errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
 
                     kv = {
@@ -197,13 +204,14 @@ class Processor(object):
                         'udate': udate,
                         'apay': apay,
                         'atotal': atotal,
+                        'imported': 1,
                     }
 
                     if self.pglib.update(table='daily', kv=kv, id=dailyID):
                         # completed = True
                         pass
                 else:
-                    self.logger.critical(msg='void this cause ymd [%s] is not [%s]' % (yyyymmdd, today))
+                    self.logger.debug(msg='void this cause ymd [%s:%s] is not [%s]' % (shop, yyyymmdd, today))
             else:
                 self.logger.critical(msg='void this cause no shopcode')
                 completed = False

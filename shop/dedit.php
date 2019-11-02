@@ -37,6 +37,7 @@ if($handle=pg_connect($pgconnect)){
 		
 		$mlot = $_REQUEST['mlot'];
 		$myen = $_REQUEST['myen'];
+		$dtp = $_REQUEST['dtp'];
 
 		for($a=0,$b=$days,$dd=1; $b--; $a++,$dd++){
 			if($modify[$a]=='t'){
@@ -73,6 +74,7 @@ if($handle=pg_connect($pgconnect)){
 
 				$set[] = sprintf("mlot='%d'",$mlot[$a]);
 				$set[] = sprintf("myen='%d'",$myen[$a]);
+				$set[] = sprintf("dtp='%s'",$dtp);
 
 				$set[] = sprintf("visitor='%d'",$visitor[$a]);
 				$set[] = sprintf("open=%s",isset($open[$a])? "false":"true");
@@ -98,6 +100,13 @@ if($handle=pg_connect($pgconnect)){
 	else{
 		$id = 0;
 		$ym = $tt;
+	}
+	$dtp = '????';
+	if($id){
+		$query = sprintf("select dtp from shop were id=%d", $id);
+		$qr = pg_fetch_array($handle,$query);
+		$qo = $qr[0];
+		$dtp = $qo['dtp'];
 	}
 	
 ?>
@@ -568,7 +577,8 @@ function zoomTA(dst,onoff)
 						<td class="th-editDigit"><input name="mLSum" type="text" class="input-Digit" id="mLSum" value="<?php printf("%d",$mLSum); ?>" size="6" maxlength="6" readonly="true" /></td>
 						<td class="th-editDigit"><input name="mYSum" type="text" class="input-Digit" id="mYSum" value="<?php printf("%d",$mYSum); ?>" size="6" maxlength="6" readonly="true" /></td>
 						<td class="th-editDigit">
-						<input name="exec" type="submit" disabled="disabled" id="exec" value="登録" /></td>
+						<input name="dtp" type="hidden" id="dtp" value="<?php echo($dtp); ?>" />
+				  <input name="exec" type="submit" disabled="disabled" id="exec" value="登録" /></td>
 				</tr>
 		</table>
 		<label>
