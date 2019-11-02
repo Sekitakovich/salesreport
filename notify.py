@@ -85,8 +85,9 @@ class NotifyMail(object):
         query = 'select nickname,mail from staff where vf=true and attribute&%d<>0' % self.notifyMask
         dst: list = self.pglib.select(query=query)
         for m in dst:
-            for mail in m['mail']:
-                sendto.append(mail)
+            to: str = m['mail'][0]
+            if to:
+                sendto.append(to)
 
         return sendto
 

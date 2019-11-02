@@ -133,7 +133,7 @@ class Processor(object):
 
         udate: str = dt.now().strftime(self.timeformat)
         today: str = dt.now().strftime(self.dateformat)
-        completed: bool = False
+        completed: bool = True
 
         try:
             yyyymmdd: str = dt(int(item[0][0:4]), int(item[0][4:6]), int(item[0][6:8])).strftime(self.dateformat)
@@ -161,6 +161,7 @@ class Processor(object):
             pass
         except (IndexError, ValueError, UnicodeDecodeError) as e:
             self.logger.error(msg=e)
+            completed = False
         else:
             just: bool = (yyyymmdd == today)
             if shop:
@@ -175,7 +176,7 @@ class Processor(object):
                     dailyID = self.findDaily(shopID=shopID, yyyymmdd=yyyymmdd, dtp=shop)
                     if dailyID == 0:
                         self.logger.warning(msg='daily [%s:%s] was not found' % (shop, yyyymmdd))
-                        self.errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
+                        # self.errorList.append('daily [%s:%s] was not found' % (shop, yyyymmdd))
 
                     kv = {
                         'yyyymmdd': yyyymmdd,
@@ -199,11 +200,13 @@ class Processor(object):
                     }
 
                     if self.pglib.update(table='daily', kv=kv, id=dailyID):
-                        completed = True
+                        # completed = True
+                        pass
                 else:
                     self.logger.critical(msg='void this cause ymd [%s] is not [%s]' % (yyyymmdd, today))
             else:
                 self.logger.critical(msg='void this cause no shopcode')
+                completed = False
 
         return completed
 

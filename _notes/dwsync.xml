@@ -11,9 +11,9 @@
 <file name="cleaner.py" server="master.hpfrance.com/www/" local="132119009223751377" remote="132171211080000000" Dst="0" />
 <file name="main.py" server="master.hpfrance.com/www/" local="132171385191190017" remote="132171418110000000" Dst="0" />
 <file name="pglib.py" server="master.hpfrance.com/www/" local="132139697897385813" remote="132139932700000000" Dst="0" />
-<file name="processor.py" server="master.hpfrance.com/www/" local="132171388818959249" remote="132171418110000000" Dst="0" />
+<file name="processor.py" server="master.hpfrance.com/www/" local="132171504483448365" remote="132171504890000000" Dst="0" />
 <file name="retrieve.py" server="master.hpfrance.com/www/" local="132132762558388682" remote="132132775650000000" Dst="0" />
 <file name="settings.py" server="master.hpfrance.com/www/" local="132171397681623906" remote="132171418110000000" Dst="0" />
-<file name="notify.py" server="master.hpfrance.com/www/" local="132122928899136620" remote="132129321690000000" Dst="0" />
+<file name="notify.py" server="master.hpfrance.com/www/" local="132171499816009570" remote="132171504890000000" Dst="0" />
 <file name="dumpsales.py" server="master.hpfrance.com/www/" local="132171229334465039" remote="132171229380000000" Dst="0" />
 </dwsync>
