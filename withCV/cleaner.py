@@ -3,7 +3,7 @@ import pathlib
 from datetime import datetime as dt
 import logging
 
-from settings import Settings
+from withCV.settings import Settings
 
 
 class Cleaner(object):

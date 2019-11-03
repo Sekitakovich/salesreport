@@ -36,7 +36,8 @@ class Retriever(object):
                             ftp.delete(filename=filename)
                             self.logger.info(msg='+++ retrieved and deleted %s from %s' % (filename, self.server))
                 else:
-                    self.logger.debug(msg='??? no %s files' % (suffix,))
+                    # self.logger.debug(msg='??? no %s files' % (suffix,))
+                    pass
 
         except (ftplib.error_perm, ftplib.error_proto, ftplib.error_reply, ftplib.error_temp, IOError) as e:
             self.logger.error(msg=e)

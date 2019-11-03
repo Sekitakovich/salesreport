@@ -5,8 +5,8 @@ import logging
 import shutil
 # from dataclasses import dataclass
 
-from pglib import PGLib
-from notify import NotifyMail
+from withCV.pglib import PGLib
+from withCV.notify import NotifyMail
 
 
 # @dataclass()
@@ -233,21 +233,31 @@ class Processor(object):
             self.logger.error(msg=e)
         else:
 
+            ss: int = 0
+            bs: int = 0
             erros: int = 0
+
             for index, text in enumerate(line, 1):
                 csv: List[str] = text.rstrip('\n').split(',')
                 # self.logger.debug(msg='Line[%04d] %s' % (index, csv))
                 if type == 'S':
                     if self.saveSales(item=csv) is False:
+                        ss += 1
                         erros += 1
                 else:
                     if self.saveBudget(item=csv) is False:
+                        bs += 1
                         erros += 1
 
             if erros == 0:
                 shutil.move(src=workpath, dst=savepath)
             else:
                 self.logger.warning(msg='%d erros was occured at %s' % (erros, filename))
+
+            if bs:
+                self.logger.info(msg='%d budget record(s) was imported' % bs)
+            if ss:
+                self.logger.info(msg='%d sales record(s) was imported' % ss)
 
             if len(self.errorList):
                 self.nofity.notify(item=self.errorList)

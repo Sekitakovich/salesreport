@@ -3,7 +3,7 @@ from psycopg2.extras import DictCursor
 from typing import List
 import logging
 
-from settings import Settings
+from withCV.settings import Settings
 
 
 class PGLib(object):

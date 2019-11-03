@@ -3,10 +3,10 @@ import time
 import argparse
 from logging.handlers import TimedRotatingFileHandler
 
-from retrieve import Retriever
-from processor import Processor
-from cleaner import Cleaner
-from settings import Settings
+from withCV.retrieve import Retriever
+from withCV.processor import Processor
+from withCV.cleaner import Cleaner
+from withCV.settings import Settings
 
 
 if __name__ == '__main__':

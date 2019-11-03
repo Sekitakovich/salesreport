@@ -1,0 +1,4 @@
+2019-11-03 09:54:46 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 09:54:46 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 09:54:46 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103095024_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 09:54:46 main:72 <module> [INFO]: --- end session over 0.44 sec
