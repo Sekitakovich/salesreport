@@ -19,17 +19,30 @@ class PGLib(object):
             '\'': "\'\'",
         })
 
+        self.isConnected: bool = False
+        try:
+            self.handle = psycopg2.connect(self.param)
+            self.cursor = self.handle.cursor(cursor_factory=DictCursor)
+        except psycopg2.Error as e:
+            self.logger.error(msg=e)
+        else:
+            self.isConnected = True
+
+    def __del__(self):
+        if self.isConnected:
+            self.cursor.close()
+            self.handle.close()
+            pass
+
     def pg_escape_string(self, *, src: str) -> str:
         return src.translate(self.escapetable)
 
     def select(self, *, query: str) -> list:
         try:
-            with psycopg2.connect(self.param) as handle:
-                with handle.cursor(cursor_factory=DictCursor) as cursor:
-                    cursor.execute('begin')
-                    cursor.execute(query)
-                    result: list = cursor.fetchall()
-                    cursor.execute('commit')
+            self.cursor.execute('begin')
+            self.cursor.execute(query)
+            result: list = self.cursor.fetchall()
+            self.cursor.execute('commit')
         except psycopg2.Error as e:
             self.logger.error(msg=e)
         else:
@@ -40,26 +53,24 @@ class PGLib(object):
         item: List[str] = []
 
         try:
-            with psycopg2.connect(self.param) as handle:
-                with handle.cursor(cursor_factory=DictCursor) as cursor:
-                    cursor.execute('begin')
-                    cursor.execute('lock table %s in exclusive mode' % (table, ))  # notice!
-                    if id == 0:
-                        query: str = 'select max(id)+1 as next from %s' % (table,)
-                        cursor.execute(query)
-                        result = cursor.fetchone()
-                        id = int(result['next'])
-                        query: str = 'insert into %s(id) values(%d)' % (table, id)
-                        cursor.execute(query)
-                        pass
+            self.cursor.execute('begin')
+            self.cursor.execute('lock table %s in exclusive mode' % (table, ))  # notice!
+            if id == 0:
+                query: str = 'select max(id)+1 as next from %s' % (table,)
+                self.cursor.execute(query)
+                result = self.cursor.fetchone()
+                id = int(result['next'])
+                query: str = 'insert into %s(id) values(%d)' % (table, id)
+                self.cursor.execute(query)
+                pass
 
-                    for k, v in kv.items():
-                        item.append("%s='%s'" % (k, v))
+            for k, v in kv.items():
+                item.append("%s='%s'" % (k, v))
 
-                    query: str = 'update %s set %s where id=%d' % (table, ','.join(item), id)
-                    # self.logger.debug(msg=query)
-                    cursor.execute(query)
-                    cursor.execute('commit')
+            query: str = 'update %s set %s where id=%d' % (table, ','.join(item), id)
+            # self.logger.debug(msg=query)
+            self.cursor.execute(query)
+            self.cursor.execute('commit')
         except psycopg2.Error as e:
             self.logger.error(msg=e)
             return 0

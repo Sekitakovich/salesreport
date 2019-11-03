@@ -16,3 +16,74 @@
 2019-11-03 10:46:12 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103103026_SALES.csv from bsm05.dtpnet.co.jp
 2019-11-03 10:46:12 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103104026_SALES.csv from bsm05.dtpnet.co.jp
 2019-11-03 10:46:13 main:72 <module> [INFO]: --- end session over 1.21 sec
+2019-11-03 11:52:03 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 11:52:03 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 11:52:04 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103115028_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 11:52:06 main:72 <module> [INFO]: --- end session over 2.74 sec
+2019-11-03 12:02:06 main:59 <module> [INFO]: *** Start session[2]
+2019-11-03 12:02:07 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103120029_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 12:02:09 main:72 <module> [INFO]: --- end session over 2.84 sec
+2019-11-03 12:12:09 main:59 <module> [INFO]: *** Start session[3]
+2019-11-03 12:12:09 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103121028_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 12:12:13 main:72 <module> [INFO]: --- end session over 3.57 sec
+2019-11-03 12:22:13 main:59 <module> [INFO]: *** Start session[4]
+2019-11-03 12:22:13 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103122029_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 12:22:17 main:72 <module> [INFO]: --- end session over 4.03 sec
+2019-11-03 12:32:17 main:59 <module> [INFO]: *** Start session[5]
+2019-11-03 12:32:17 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103123029_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 12:32:21 main:72 <module> [INFO]: --- end session over 4.07 sec
+2019-11-03 12:42:21 main:59 <module> [INFO]: *** Start session[6]
+2019-11-03 12:42:21 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103124029_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 12:42:25 main:72 <module> [INFO]: --- end session over 3.97 sec
+2019-11-03 12:52:25 main:59 <module> [INFO]: *** Start session[7]
+2019-11-03 12:52:25 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103125030_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 12:52:29 main:72 <module> [INFO]: --- end session over 4.19 sec
+2019-11-03 12:58:18 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 12:58:18 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 12:58:20 main:72 <module> [INFO]: --- end session over 1.90 sec
+2019-11-03 13:04:05 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 13:04:05 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 13:04:05 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103130000_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 13:04:06 main:72 <module> [INFO]: --- end session over 1.80 sec
+2019-11-03 13:14:42 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 13:14:42 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 13:14:44 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103131000_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 13:14:46 main:72 <module> [INFO]: --- end session over 3.56 sec
+2019-11-03 13:16:34 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 13:16:34 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 13:16:34 main:72 <module> [INFO]: --- end session over 0.21 sec
+2019-11-03 13:19:07 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 13:19:07 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 13:19:07 main:72 <module> [INFO]: --- end session over 0.20 sec
+2019-11-03 13:29:07 main:59 <module> [INFO]: *** Start session[2]
+2019-11-03 13:29:08 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103132000_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 13:29:10 processor:262 importCV [INFO]: 163 sales record(s) was imported
+2019-11-03 13:29:10 main:72 <module> [INFO]: --- end session over 2.11 sec
+2019-11-03 13:39:10 main:59 <module> [INFO]: *** Start session[3]
+2019-11-03 13:39:10 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103133001_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 13:39:12 processor:262 importCV [INFO]: 164 sales record(s) was imported
+2019-11-03 13:39:12 main:72 <module> [INFO]: --- end session over 2.10 sec
+2019-11-03 13:49:12 main:59 <module> [INFO]: *** Start session[4]
+2019-11-03 13:49:12 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103134001_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 13:49:14 processor:262 importCV [INFO]: 164 sales record(s) was imported
+2019-11-03 13:49:14 main:72 <module> [INFO]: --- end session over 2.12 sec
+2019-11-03 15:12:47 main:59 <module> [INFO]: *** Start session[5]
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103135001_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103140002_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103141002_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103142002_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103143003_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103144003_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:48 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103145003_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:49 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103150004_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:49 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103151004_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 15:12:51 processor:262 importCV [INFO]: 165 sales record(s) was imported
+2019-11-03 15:12:52 processor:262 importCV [INFO]: 165 sales record(s) was imported
+2019-11-03 15:12:55 processor:262 importCV [INFO]: 167 sales record(s) was imported
+2019-11-03 15:12:57 processor:262 importCV [INFO]: 170 sales record(s) was imported
+2019-11-03 15:12:59 processor:262 importCV [INFO]: 171 sales record(s) was imported
+2019-11-03 15:13:02 processor:262 importCV [INFO]: 174 sales record(s) was imported
+2019-11-03 15:13:04 processor:262 importCV [INFO]: 175 sales record(s) was imported
+2019-11-03 15:13:07 processor:262 importCV [INFO]: 178 sales record(s) was imported
+2019-11-03 15:13:10 processor:262 importCV [INFO]: 178 sales record(s) was imported
+2019-11-03 15:13:10 main:72 <module> [INFO]: --- end session over 22.27 sec

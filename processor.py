@@ -242,12 +242,14 @@ class Processor(object):
                 # self.logger.debug(msg='Line[%04d] %s' % (index, csv))
                 if type == 'S':
                     if self.saveSales(item=csv) is False:
-                        ss += 1
                         erros += 1
+                    else:
+                        ss += 1
                 else:
                     if self.saveBudget(item=csv) is False:
-                        bs += 1
                         erros += 1
+                    else:
+                        bs += 1
 
             if erros == 0:
                 shutil.move(src=workpath, dst=savepath)
