@@ -34,13 +34,18 @@ class Settings(object):
 
     class Local(object):
 
-        basepath: str = 'withCV'
-
-        workpath: str = '%s/work' % basepath
-        savepath: str = '%s/fins' % basepath
+        # basepath: str = 'withCV'
+        #
+        # workpath: str = '%s/work' % basepath
+        # savepath: str = '%s/fins' % basepath
         savedays: int = 7
+        #
+        # logpath: str = '%s/logs' % basepath
+        # logfile: str = '%s/server.log' % (logpath,)
 
-        logpath: str = '%s/logs' % basepath
+        workpath: str = './work'
+        savepath: str = './fins'
+        logpath: str = './logs'
         logfile: str = '%s/server.log' % (logpath,)
 
     class Params(object):

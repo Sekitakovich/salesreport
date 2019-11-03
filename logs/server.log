@@ -11,3 +11,8 @@
 2019-11-03 10:21:23 main:59 <module> [INFO]: *** Start session[1]
 2019-11-03 10:21:23 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103102025_SALES.csv from bsm05.dtpnet.co.jp
 2019-11-03 10:21:24 main:72 <module> [INFO]: --- end session over 0.54 sec
+2019-11-03 10:46:12 main:49 <module> [INFO]: === CV -> Salesreport autoimport system version 1.01 was started
+2019-11-03 10:46:12 main:59 <module> [INFO]: *** Start session[1]
+2019-11-03 10:46:12 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103103026_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 10:46:12 retrieve:37 readCSV [INFO]: +++ retrieved and deleted 20191103104026_SALES.csv from bsm05.dtpnet.co.jp
+2019-11-03 10:46:13 main:72 <module> [INFO]: --- end session over 1.21 sec
