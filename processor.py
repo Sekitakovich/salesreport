@@ -5,8 +5,8 @@ import logging
 import shutil
 # from dataclasses import dataclass
 
-from withCV.pglib import PGLib
-from withCV.notify import NotifyMail
+from pglib import PGLib
+from notify import NotifyMail
 
 
 # @dataclass()

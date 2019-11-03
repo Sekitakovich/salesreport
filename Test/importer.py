@@ -1,4 +1,4 @@
-from withCV.pglib import PGLib
+from pglib import PGLib
 
 if __name__ == '__main__':
 

@@ -3,8 +3,8 @@ from email.message import EmailMessage
 from typing import List
 import logging
 
-from withCV.pglib import PGLib
-from withCV.settings import Settings
+from pglib import PGLib
+from settings import Settings
 
 
 class NotifyMail(object):
