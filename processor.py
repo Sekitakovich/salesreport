@@ -28,7 +28,7 @@ from notify import NotifyMail
 
 class Processor(object):
 
-    def __init__(self, *, workpath: str, savepath: str, todayOnly: bool = False):
+    def __init__(self, *, workpath: str, savepath: str, todayOnly: bool = False, takeB: bool=True, takeS: bool = True ):
 
         self.workpath: str = workpath
         self.savepath: str = savepath
@@ -48,6 +48,8 @@ class Processor(object):
         self.matchTable: Dict[str, int] = {}
 
         self.todayOnly = todayOnly  # 暫定措置として本日のSALESだけを扱う
+        self.takeS = takeS  # SALESをインポートする 2019-11-03
+        self.takeB = takeB  # BUDGETをインポートする 2019-11-03
 
     def wanted(self):
         """
@@ -213,6 +215,7 @@ class Processor(object):
                         pass
                 else:
                     self.logger.debug(msg='void this cause ymd [%s:%s] is not [%s]' % (shop, yyyymmdd, today))
+                    completed = False
             else:
                 self.logger.critical(msg='void this cause no shopcode')
                 completed = False
@@ -234,22 +237,28 @@ class Processor(object):
         else:
 
             ss: int = 0
+            st: int = 0
             bs: int = 0
+            bt: int = 0
             erros: int = 0
 
             for index, text in enumerate(line, 1):
                 csv: List[str] = text.rstrip('\n').split(',')
                 # self.logger.debug(msg='Line[%04d] %s' % (index, csv))
-                if type == 'S':
+                if type == 'S' and self.takeS:
+                    st += 1
                     if self.saveSales(item=csv) is False:
                         erros += 1
                     else:
                         ss += 1
-                else:
+                    pass
+                elif self.takeB:  # 2019-11-03 17:30 内田からのリクエストにお応えして
+                    bt += 1
                     if self.saveBudget(item=csv) is False:
                         erros += 1
                     else:
                         bs += 1
+                    pass
 
             if erros == 0:
                 shutil.move(src=workpath, dst=savepath)
@@ -257,9 +266,9 @@ class Processor(object):
                 self.logger.warning(msg='%d erros was occured at %s' % (erros, filename))
 
             if bs:
-                self.logger.info(msg='%d budget record(s) was imported' % bs)
+                self.logger.info(msg='%d/%d budget record(s) was imported' % (bs, bt))
             if ss:
-                self.logger.info(msg='%d sales record(s) was imported' % ss)
+                self.logger.info(msg='%d/%d sales record(s) was imported' % (ss, st))
 
             if len(self.errorList):
                 self.nofity.notify(item=self.errorList)

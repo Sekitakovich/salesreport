@@ -11,6 +11,17 @@ from settings import Settings
 
 if __name__ == '__main__':
 
+    """
+    以下三行、×××な某社のおかげで急遽追加された機能のスイッチ
+    """
+    todayOnly: bool = True  # 当日のSALESレコード以外を捨てる
+    takeB: bool = False  # BUDGETをインポートする
+    takeS: bool = True  # SALESをインポートする
+
+    """
+    やれやれ
+    """
+
     logger = logging.getLogger('Log')
     logger.setLevel(logging.DEBUG)
 
@@ -43,10 +54,11 @@ if __name__ == '__main__':
     oneshot: bool = args.oneshot
 
     ftpDTP = Retriever(server=ftpserver, username=username, password=password, folder=defaultfolder, workpath=workpath)
-    processor = Processor(workpath=workpath, savepath=savepath, todayOnly=True)  # 暫定措置
+    processor = Processor(workpath=workpath, savepath=savepath, todayOnly=todayOnly, takeB=takeB, takeS=takeS)  # 暫定措置
     cleaner = Cleaner()
 
     logger.info(msg='=== CV -> Salesreport autoimport system version %s was started' % (Settings.INFO.version))
+    logger.info(msg='Notice! takeS=%s takeB=%s todayOnly=%s' % (takeS, takeB, todayOnly))
 
     counter: int = 0
 
